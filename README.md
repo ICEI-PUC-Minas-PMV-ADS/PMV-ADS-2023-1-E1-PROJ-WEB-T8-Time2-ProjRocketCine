@@ -10,14 +10,14 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 
-* Bruno
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Bruno Henrique Arantes Dias 
+* Leonardo Gabriel de Matos Campos 
+* Pedro Ferreira Andrade 
+* Wesley Correa Gomes
 
 ## Orientador
 
-* Nome completo do professor 1
+* Marco Rodrigo Costa
 
 ## Instruções de utilização
 
