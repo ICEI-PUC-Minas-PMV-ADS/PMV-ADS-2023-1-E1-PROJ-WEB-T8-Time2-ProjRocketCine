@@ -1,46 +1,45 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Com o passar do tempo, o aumento das produções cinematográficas e o crescimento de plataformas de streaming como Netflix, Amazon Prime, Disney+ e outras, permitiu aos usuários um grande acervo de conteúdo em um mesmo local. Junto a esse crescimento, houve também um aumento na exigência pela qualidade do enredo, fotografia e direção, havendo assim, a necessidade de um melhor sistema de avaliação dos conteúdos. 
+
+Nesse sentido, torna-se essencial ter um sistema de avaliação eficiente dos conteúdos, para ajudar os usuários a encontrar os filmes e séries de TV que mais se adequam às suas preferências e expectativas. Os sistemas de avaliação podem incluir críticas de especialistas da indústria, avaliações de usuários e classificações por estrelas, por exemplo. 
+
+Além disso, a avaliação dos usuários em plataformas de streaming pode servir como uma ferramenta valiosa para os produtores de filmes e séries de TV, já que esses feedbacks podem ser usados para aprimorar a qualidade do conteúdo produzido. Isso pode incluir ajustes no enredo, aprimoramento da fotografia ou até mesmo mudanças na direção. 
+
+Em resumo, à medida que a indústria cinematográfica continua a crescer e as plataformas de streaming se tornam cada vez mais populares, é essencial que os sistemas de avaliação sejam melhorados para atender às crescentes demandas dos usuários. Dessa forma, os espectadores podem encontrar facilmente o conteúdo de alta qualidade que procuram, enquanto os produtores podem receber feedback valioso para melhorar suas produções futuras. 
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+Pelo fato supracitado, o projeto ajuda a exterminar a frustração de usuários de streaming ao se deparar com a escassez de informações sobre os filmes e séries em programas de streaming, como a falta de uma descrição mais detalhada sobre o filme ou série na visão de um usuário comum ou mesmo de um crítico sobre a obra. 
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo do trabalho é a criação de um site onde se busca melhorar a interação de usuários das plataformas de streaming, por um rol de opções para interações e avaliações sobre as obras. 
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Como objetivos específicos, pode-se ressaltar: 
+
+1. Melhorar funcionalidades de interações dentro da plataforma. 
+
+2. Criar um fórum para debates e discussões sobre o conteúdo assistido.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+Oliveira (2017) esclarece que: 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+ 
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+As primeiras iniciativas na área de crítica cinematográfica remontam a algumas nações da Europa e aos Estados Unidos dos anos 1900. Inspirados em publicações sobre o mundo do teatro, jornalistas e entusiastas da invenção dos Lumière avaliavam as produções fílmicas recentes em textos bastante próximos às atuais sinopses. À medida que as indústrias cinematográficas ao redor do mundo cresceram, diversificou-se também o papel dos críticos – muitos, por exemplo, ganharam proeminência para debater questões estéticas, profissionais e políticas do mundo do cinema. (OLIVEIRA, 2017, p.1). 
+
+ 
+
+Com a ascensão da internet e o surgimento de novas tecnologias, surgiram também outras formas de entretenimento visual, como as séries de televisão, documentários e outros. Além da criação de aplicativos e plataformas de streaming, que ajudam na distribuição do conteúdo e permitem, não só aos críticos como também aos usuários comuns, maior liberdade para expressar suas opiniões sobre as obras. 
+
+Sendo assim, para que o cenário das críticas possa acompanhar as tendências do setor de entretenimento visual, a utilização de sites de avaliação torna-se fundamental para o apoio da disseminação de informações que auxiliam os espectadores. 
+
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+Quando se pensa em filmes ou séries, sempre chega-se à pergunta “o que eu devo assistir?”. Após entrar nas plataformas de streaming surge um loop, entrando na página de um filme, não gostando indo para outro, e repetindo esse ciclo por muito tempo, por não saber se aquele conteúdo é bom e se vai agregar algo em sua vida. 
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Por causa desses questionamentos, o “Rocket Cine" foi criado para ajudar seu público-alvo, trazendo à tona uma solução para essas pessoas, ajudando-as com avaliações e comentários de outros usuários. 
