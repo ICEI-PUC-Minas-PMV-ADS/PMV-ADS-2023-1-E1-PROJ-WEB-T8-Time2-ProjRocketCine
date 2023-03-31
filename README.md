@@ -6,7 +6,7 @@
 
 `PRIMEIRO SEMESTRE 2023/01`
 
-O projeto tem o foco de ajudar os usuários a obterem uma pesquisa mais detalhada sobre filmes e séries. 
+O projeto tem como foco o compartilhamento de críticas e avaliações dos usuários a respeito de filmes e séries.
 
 ## Integrantes
 
