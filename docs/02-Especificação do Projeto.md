@@ -7,26 +7,26 @@ Os detalhes levantados nesse processo foram consolidados na forma de personas e 
 ## Personas
 As personas levantadas durante o processo de entendimento do problema são apresentadas a seguir: 
 
-# Luciana Alencar 
+### Luciana Alencar 
 
 Luciana é uma mulher de 50 anos que trabalha há 8 anos em uma franquia de escolas de idioma, onde exerce a função de secretária, mas também trabalhou no setor financeiro. Ela gosta da sua área e acredita estar no lugar certo. Porém, Luciana recentemente ingressou em um curso sobre terapia e descobriu um novo amor por outra profissão, onde se sente feliz e acredita ser uma opção que pode fazê-la sair do atual emprego para buscar novos ares.  
 
 Ela passa seu tempo no Instagram, WhatsApp e no Facebook, e um de seus hobbies é assistir filmes e séries em plataformas de streaming. Porém ela tem algumas frustrações com os sites de streaming por muitas vezes não conter locais para comentários, acesso a quantidade de pessoas que indicam tal filme e ter pouco acervo de opções nas plataformas. 
 
 
-# Junior Lucarios 
+### Junior Lucarios 
 
 Junior é um homem de 22 anos que há 2 anos trabalha como assessor de vendas em uma loja de colchões no shopping, para ganhar dinheiro para o seu intercâmbio de inglês no Reino Unido. Junior tem uma forte paixão pela área de engenharia de bioprocessos, curso que realiza em sua cidade. Porém, para se destacar, Junior precisa de um bom nível de inglês para conseguir um estágio, e enquanto não consegue o dinheiro para as viagens. Junior utiliza bastante o Instagram, Reddit e Youtube, e assiste filmes e séries para treinar seu inglês. Todavia, ele encontra-se frustrado por não encontrar comentários dizendo se o conteúdo que está assistindo é relevante para ajudá-lo em sua jornada de aprendizado. 
 
 
-# Fábio Cardoso 
+### Fábio Cardoso 
 
 Fábio é um adolescente de 17 anos que estuda em um colégio público no interior do estado e faz cursinho para prestar exames de admissão na faculdade. Com uma rotina intensa de estudos, ele se mantém informado das questões atuais utilizando redes sociais e aplicativos como o Discord, Instagram, OneFootball e TikTok enquanto está se deslocando no ônibus, e ainda pratica futebol à noite depois das aulas.  
 
 Nos últimos tempos, ele vem se preocupando com sua indecisão para escolher sua carreira, então decidiu assistir alguns filmes e documentários relacionados a algumas profissões para descobrir do que realmente gosta. Desde então, ele vem fazendo buscas por obras cinematográficas que representam essas profissões da forma mais realista possível. 
 
  
-# Cristóvão Goulart 
+### Cristóvão Goulart 
 
 Cristóvão é um homem de 32 anos e trabalha como gestor de tráfego há cerca de 10 anos. Ele ingressou na carreira do mercado digital aos 20 anos e logo 2 anos depois virou gestor de tráfego, conseguindo um bom destaque ao entrar em uma empresa na qual está junto dela até os dias de hoje.  
 
