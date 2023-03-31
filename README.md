@@ -1,12 +1,12 @@
-# TÍTULO DO PROJETO
+# ROCKET CINE
 
-`CURSO`
+`ANALISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA`
+`DESENVOLVIMENTO DE APLICAÇÃO WEB FRONT-END`
 
-`SEMESTRE`
+`PRIMEIRO SEMESTRE 2023/01`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto tem o foco de ajudar os usuários a obterem uma pesquisa mais detalhada sobre filmes e séries. 
 
 ## Integrantes
 
