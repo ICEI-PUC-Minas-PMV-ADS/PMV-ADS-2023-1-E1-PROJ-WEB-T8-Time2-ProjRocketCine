@@ -19,9 +19,6 @@ O projeto tem o foco de ajudar os usuários a obterem uma pesquisa mais detalhad
 
 * Marco Rodrigo Costa
 
-## Instruções de utilização
-
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
 
 # Documentação
 
