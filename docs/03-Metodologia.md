@@ -23,7 +23,7 @@ A ferramenta de controle de versão adotada no projeto foi o
 [Git](https://git-scm.com/), sendo que o [Github](https://github.com)
 foi utilizado para hospedagem do repositório.
 
-O grupo utiliza um processo baseado no Git Flow para gerenciar o código fonte do software desenvolvido, como ilustrado na Figura. Esse processo envolve a realização de todas as manutenções no código em branches separados, que são identificados como Hotfix, Release, Develop e Feature.
+O grupo utiliza um processo baseado no Git Flow para gerenciar o código fonte do software desenvolvido, como ilustrado na figura. Esse processo envolve a realização de todas as manutenções no código em branches separados, que são identificados como Master, Hotfix, Release, Develop e Feature.
 
 <img src="./img/gitflow.png">
 
