@@ -14,7 +14,7 @@ Ambiente|Plataforma|Link de Acesso
 |:--------|:----------:|:--------------:|
 |Repositório do Código Fonte|GitHub|[GitHub](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2023-1-E1-PROJ-WEB-T8-Time2-ProjRocketCine)|
 |Documentos do projeto|GoogleDocs|[Documentação](https://docs.google.com/document/d/1OV0xoWCWm56ovv-WXnp68zAIG7OMrECO/edit?usp=sharing&ouid=112099303973032315178&rtpof=true&sd=true)|
-|Projeto de Interface e  Wireframes|Figma|[Wireframes]()|
+|Projeto de Interface e  Wireframes|Figma|[Wireframes](https://www.figma.com/file/OoOLaNipYZtjN9zcc28tFp/Projeto-para-o-curso-ads?node-id=0-1&t=jm3Z4pTz1oVrL1Ru-0)|
 |Gerenciamento do Projeto|Github Projects|[Projeto Rocket Cine](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/372/views/1)|
 
 ## Controle de Versão
