@@ -3,33 +3,53 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
-
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
+Dentre as preocupações para a montagem da interface do projeto, buscamos estabelecer melhores funcionalidades e interações dos usuários dentro do site. Tendo um design intuitivo e de fácil utilização, contendo interações de telas e funcionalidades únicas de fácil uso, buscando o funcionamento em desktops e dispositivos móveis.
 
 ## User Flow
 
-![Exemplo de UserFlow](img/userflow.jpg)
+O diagrama apresentado abaixo mostra as funcionalidades do projeto e as interações que os usuários podem ter pelas telas do site. Cada uma das telas deste fluxo é detalhada na seção de Wireframes que se segue.
 
-Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
-
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
-
+<img src="./img/UserFlow.png">
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+Com base no fluxo de usuário mostrado anteriormente, serão apresentadas em detalhes nesta seção as telas pertencentes ao projeto. Elas se encontram estruturadas em  3 grandes blocos:
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+- Cabeçalho - navegação principal do site (menu da aplicação);
+- Conteúdo - apresenta o conteúdo da tela em questão;
+- Barra lateral - local onde são dispostos elementos fixos de identidade (logo) e apresenta os elementos de navegação secundária, como por exemplo: seleção de gênero e mais avaliados.
+
+### Home Page
+
+A página inicial exibe uma seleção de filmes com base na API usada pelo sistema. Além disso, ela apresenta conteúdos e funções relevantes para os usuários, como filmes em destaque, os mais recentes, os favoritos dos fãs, pesquisa e séries. A barra lateral da página contém dois componentes:
+
+- Componente de seleção de gênero - permite ao usuário escolher qual gênero deseja observar.
+- Componente de mais avaliados - o usuário pode visualizar quais são os filmes/séries mais bem avaliados no site.
+
+<img src="./img/Home page.png">
+
+### Página de Gênero
+
+Após entrar no site, o usuário pode selecionar um gênero na home page, sendo assim redirecionado para a página do mesmo. Nessa tela, o usuário pode visualizar os filmes/séries do gênero selecionado e optar por qual filme/série deseja obter informações ou avaliar.
+
+<img src="./img/Pagina do genero.png">
+
+### Página de Filme/Comentários
+
+Quando um usuário escolhe um filme na página de gênero, ele é direcionado para a sua página, onde tem acesso a informações detalhadas como título, sinopse, elenco, entre outras. Nessa página, é possível também avaliar e comentar sobre o filme.
+
+<img src="./img/filme-1.png">
+
+<img src="./img/filme-2.png">
+
+### Cadastro
+
+Caso o usuário ainda não tenha uma conta no site e decida clicar no botão de cadastro presente na tela de login, ele abrirá o pop-up da tela de cadastro. Nessa tela, o usuário deverá preencher um formulário com suas informações pessoais, como nome, e-mail e a senha desejada, para criar sua conta no sistema.
+
+<img src="./img/Cadastro.png">
+
+### Login
+
+Se o usuário clicar no botão de login presente na home page, ele abrirá o pop-up da tela de login. Nessa tela, o usuário pode inserir suas credenciais, como o nome de usuário e a senha, para acessar sua conta no sistema. Há também a opção de recuperação de senha, caso o usuário tenha esquecido suas informações.
+
+<img src="./img/Login.png">
