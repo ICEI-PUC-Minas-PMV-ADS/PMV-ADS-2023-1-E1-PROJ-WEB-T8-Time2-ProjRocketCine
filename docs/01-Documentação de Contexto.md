@@ -40,6 +40,5 @@ Sendo assim, para que o cenário das críticas possa acompanhar as tendências d
 
 ## Público-Alvo
 
-Quando se pensa em filmes ou séries, sempre chega-se à pergunta “o que eu devo assistir?”. Após entrar nas plataformas de streaming surge um loop, entrando na página de um filme, não gostando indo para outro, e repetindo esse ciclo por muito tempo, por não saber se aquele conteúdo é bom e se vai agregar algo em sua vida. 
-
-Por causa desses questionamentos, o “Rocket Cine" foi criado para ajudar seu público-alvo, trazendo à tona uma solução para essas pessoas, ajudando-as com avaliações e comentários de outros usuários. 
+O público-alvo do "Rocket Cine" são pessoas com idades entre 17 e 60 anos, que têm interesse em filmes e séries e utilizam plataformas de streaming. Essas pessoas muitas vezes se deparam com a pergunta "o que devo assistir?" e acabam em um ciclo de indecisão ao entrar nas páginas de diferentes conteúdos, sem saber se serão bons ou agregarão algo em suas vidas.
+Para resolver esse dilema, o "Rocket Cine" foi criado como uma solução, fornecendo avaliações e comentários de outros usuários, ajudando esse público a tomar decisões informadas sobre o que assistir em suas plataformas de streaming preferidas.
