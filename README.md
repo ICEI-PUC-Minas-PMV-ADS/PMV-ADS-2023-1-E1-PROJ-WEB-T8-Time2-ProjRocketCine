@@ -1,4 +1,4 @@
-<img src="./img/logo.png">
+<img src="./img/Logo.png">
 
 # ROCKET CINE
 
