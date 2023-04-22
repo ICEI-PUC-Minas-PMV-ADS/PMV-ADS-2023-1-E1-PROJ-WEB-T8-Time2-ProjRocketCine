@@ -1,6 +1,4 @@
-# ROCKET CINE
-
-<img src="./img/Logo.png">
+<img src="./docs/img/Logo.png">
 
 `ANALISE E DESENVOLVIMENTO DE SISTEMAS`
 
