@@ -1,0 +1,366 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body{
+    background-color: #232428;
+    display: flex;
+    flex-direction: column;
+    width: 99vw;
+    height: 100vh;
+}
+
+/* topbar */
+nav {
+    background-color: #2567AA;
+    width: 78%;
+    height: 8%;
+    align-self: flex-end;
+    margin-right: 2%;
+    margin-top: 1%;
+    border-radius: 32px;
+    top: 0%;
+    min-height: 8%;
+
+}
+
+
+.logar{
+    display: none;
+    transition: 5s;
+}
+
+nav .entrar_cadastrar{
+    width: 10.2%;
+    margin-top: 1.8%;
+    margin-right: 2%;
+    float: right;
+}
+
+nav #cadastrar{
+    color: white;
+    text-decoration: none;
+    margin-right: 0%;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+
+}
+
+nav #entrar{
+    color: white;
+    text-decoration: none;
+    float: right;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+
+}
+
+/* Criando menu e imagem de perfil */
+nav .perfil{
+    width: 5%;
+    margin-top: 0.7%;
+    margin-right: 2%;
+    float: right;
+    cursor: pointer;
+
+}
+
+/* Animação ao clicar no perfil */
+@keyframes perfil{
+    0%{
+        width: 70%;
+    }
+    50%{
+        width: 72.5%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+
+
+nav .perfil #foto_perfil{
+    float: left;
+    width: 75%;
+}
+
+nav .perfil #seta{
+    float: left;
+    margin-top: 30%;
+    margin-left: 4%;
+    width: 15%;
+    filter: invert(100%);
+}
+
+nav summary{
+    list-style: none; 
+}
+
+/* Configurações do menu de úsuario */
+nav .menu{
+    margin-left: -4%;
+    padding: 0;
+    margin-top: 3.6%;
+    position: absolute;
+    background-color: #2d2d2e;
+    border-radius: 10px;
+    border: .1px solid #646464;
+}
+
+nav .menu::before{
+    content: '';
+    position: absolute;
+    top: -4.5%;
+    margin-left: 58%;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #2d2d2e transparent;
+}
+
+nav .menu a{
+    color: white;
+    text-decoration: none;
+}
+
+nav .menu h2 {
+    color: white;
+    font-size: 1rem;
+    margin-left: 10%;
+    margin-top: 4%;
+    font-family: sans-serif;
+}
+
+nav .menu hr{
+    margin-top: 6%;
+    height: 1.2px;
+    background-color: #646464;
+    border: none;
+}
+
+nav .menu p {
+    color: white;
+    margin-left: 10%;
+    margin-top: 10%;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+nav .menu li a:link, nav .menu li a:visited{
+    display: inline-block;
+    padding: 4% 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav .menu li a:hover{
+    color: white;
+    background-color: #2567AA;
+}
+
+nav .menu li{
+    list-style: none;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-style: bold;
+}
+
+
+nav .menu li img{
+    width: 10%;
+    filter: invert(100%);
+}
+
+/* Conteudo do site */
+#conteudo{
+    background: linear-gradient(180deg, rgba(33, 137, 228, 0.05) 35.42%, rgba(244, 130, 37, 0.05) 100%);
+    width: 78%;
+    align-self: flex-end;
+    margin-right: 2%;
+    margin-top: 2%;
+    border-top: 2px solid white;
+    border-radius: 32px 32px 0 0;
+    box-shadow: 20px 20px 30px #101113,
+    -20px -20px 30px #161719;
+
+}
+
+/* Barra lateral com menu de opçoes de genero */
+aside{
+    border-radius: 32px;
+    background-color: #202124;
+    width: 16%;
+    height: 98%;
+    margin-top: 1%;
+    margin-left: 2%;
+    border-left: 2px solid #2567AA;
+    border-right: 2px solid #2567AA;
+    box-shadow: 20px 20px 30px #101113,
+    -20px -20px 30px #161719;
+    position: fixed;
+}
+
+aside #logo{
+    margin-top: 15%;
+    margin-left: 5%;
+}
+
+
+/* Estilização do modal de login e cadastro */
+.modal_container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 60%);
+    position: fixed;
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Animação para abrir o modal */
+@keyframes modal{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.mostrar{
+    display: flex;
+    animation: modal .3s;
+}
+
+.modal{
+    background-color: #202124;
+    width: 30%;
+    height: 50%;
+    border-radius: 20px;
+
+}
+
+/* Cadastrar*/
+.modal h2{
+    margin-left: 14%;
+    margin-top: 3.5%;
+    position: absolute;
+    color: white;
+    font-family: sans-serif;
+}
+
+/* Botão de cancelar */
+.modal h4{
+    margin-left: 19%;
+    margin-top: 19.9%;
+    font-size: larger;
+    position: absolute;
+}
+
+#modal_login .modal h4{
+    margin-left: 17.5%;
+    margin-top: 16%;
+    font-size: medium;
+    position: absolute;
+}
+
+.modal h4 a{
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.modal h4 a:hover{
+    color: #d3d3d3;
+    
+}
+
+/* Botão de cadastrar e entrar */
+.modal .botao{
+    border: 2px solid white;
+    text-align: center;
+    margin-left: 24.2%;
+    margin-top: 19.5%;
+    font-size: 1.1rem;
+    padding: 0.5% 0.8%;
+    border-radius: 10px;
+    position: absolute;
+}
+
+#modal_login .modal .botao{
+    border: 2px solid white;
+    text-align: center;
+    margin-left: 24.2%;
+    margin-top: 12.5%;
+    font-size: 1.1rem;
+    padding: 0.5% 0.8%;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.modal .botao a{
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.modal .botao a:hover{
+    color: #d3d3d3;
+    
+}
+
+/* Estilização das entradas do formulario de cadastro/login */
+.modal form{
+    float: right;
+    width: 60%;
+    height: 60%;
+    margin-top: 15%;
+}
+
+.modal form input{
+    width: 85%;
+    padding: 4%;
+    margin-top: 7%;
+    border-radius: 10px;
+    border: none;
+    margin-left: 8%;
+}
+
+/* Animação e classe para exibição de erro ao digitar errado senha ou email */
+@keyframes erro{
+    0% {
+        border: 2px solid rgba(252, 58, 58, 0.747);
+        background-color: rgba(250, 181, 181, 0.747);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0.747);
+        border: 2px solid rgba(255, 255, 255, 0.747);
+    }
+    100% {
+        border: 2px solid rgba(252, 58, 58, 0.747);
+    }
+}
+
+.erro{
+    animation: erro 1s;
+
+    animation-fill-mode: forwards;
+}
+
+.modal .gradiente_lateral{
+    float: left;
+    width: 40%;
+    height: 100%;
+    border-radius: 20px 5px 100px 20px;
+    background: linear-gradient(180deg, rgba(33, 137, 228, 0.05) 35.42%, rgba(244, 130, 37, 0.05) 100%);
+    box-shadow: 20px 0px 20px #161719;
+}
+
+
+#conteudo #testando{
+    height: 500px;
+    width: 500px;
+}
