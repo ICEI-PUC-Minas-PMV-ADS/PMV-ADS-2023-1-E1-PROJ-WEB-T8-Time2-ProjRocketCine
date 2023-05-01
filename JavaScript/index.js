@@ -114,4 +114,3 @@ function coletandoValidandoDadosLogin () {
 
 
 coletandoValidandoDadosCadastro()
-coletandoValidandoDadosLogin()
