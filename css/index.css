@@ -60,11 +60,12 @@ header #entrar {
 
 /* Criando menu e imagem de perfil */
 header .perfil {
-    width: 5%;
+    width: 2%;
     margin-top: 0.7%;
     margin-right: 2%;
     float: right;
     cursor: pointer;
+    
 
 }
 
@@ -258,9 +259,10 @@ header input {
 
 #conteudo ul{
     display:inline-block;
-    width: 13%;
+    max-width: 13%;
     height: 1%;
     margin: 15px;
+    
     
   }
   
@@ -523,6 +525,5 @@ nav hr {
     background: linear-gradient(180deg, rgba(33, 137, 228, 0.05) 35.42%, rgba(244, 130, 37, 0.05) 100%);
     box-shadow: 20px 0px 20px #161719;
 }
-
 
 

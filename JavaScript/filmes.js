@@ -33,7 +33,10 @@ async function print_movies(url_movies) {
         const ano = result.results.year
         const tipo = result.results.type
 
-        document.getElementById('conteudo').innerHTML += `<ul id="${id}"><li><img src='${img}'><p>${titulo}</p></li></ul>`
+        document.getElementById('conteudo').innerHTML += `<ul id="${id}"
+        <ul>
+        <li><img src='${img}'><p>${titulo}</p></li>
+        </ul>`
 
     } catch (error) {
         console.error(error);
