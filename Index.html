@@ -1,84 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <title>RocketCine</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="JavaScript/filmes.js" defer></script>
+    <script src="JavaScript/index.js" defer></script>
+    <title>RocketCine</title>
+</head>
 
-    <body>
-        <!-- Barra superior do site -->
+<body>
+    <!-- Barra superior do site -->
+    <header>
+        <div class="entrar_cadastrar" id="entrar_cadastrarID">
+            <a href="#modal_login" id="entrar">Entrar</a>
+            <a href="#modal_cadastro" id="cadastrar">Cadastrar</a>
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Filmes</a></li>
+            <li><a href="#">Séries</a></li>
+        </ul>
+
+        <input type="text" placeholder="Pesquisar">
+
+    </header>
+
+    <details class="perfil logar" id="perfilID">
+        <summary>
+            <img src="imagens/man.png" alt="" id="foto_perfil">
+            <img src="imagens/down-filled-triangular-arrow.png" alt="" id="seta">
+        </summary>
+
+        <ul class="menu">
+            <p>entrou como</p>
+            <h2 class="quem_entrou"></h2>
+            <hr>
+            </hr>
+            <li><a href="#">Configurações</a></li>
+            <li><a href="#">Favoritos</a></li>
+            <li><a href="#">Minhas avaliações</a></li>
+            <li><a href="">Sair <img src="imagens/logout.png" alt=""></a></li>
+        </ul>
+
+    </details>
+    </nav>
+
+    <!-- Onde ficará todo cinteudo do site -->
+    <div id="conteudo">
+    </div>
+
+    <!-- Barra lateral com menu de seleção de genero ou mais avaliados -->
+    <div id="nav_gradient">
         <nav>
-            <div class="entrar_cadastrar" id="entrar_cadastrarID">
-                <a href="#modal_login" id="entrar">Entrar</a>
-                <a href="#modal_cadastro" id="cadastrar">Cadastrar</a>
-            </div>
-            
-            <details class="perfil logar" id="perfilID">
-                <summary >
-                    <img src="imagens/man.png" alt="" id="foto_perfil">
-                    <img src="imagens/down-filled-triangular-arrow.png" alt="" id="seta">
-                </summary>
-
-                <ul class="menu">
-                    <p>entrou como</p>
-                    <h2 class="quem_entrou"></h2>
-                    <hr></hr>
-                    <li><a href="#">Configurações</a></li>
-                    <li><a href="#">Favoritos</a></li>
-                    <li><a href="#">Minhas avaliações</a></li>
-                    <li><a href="">Sair <img src="imagens/logout.png" alt=""></a></li>
-                </ul>
-
-            </details>
-        </nav>
-        
-        <!-- Onde ficará todo cinteudo do site -->
-        <div id="conteudo">
-            <div id="testando"></div>
-        </div>
-
-        <!-- Barra lateral com menu de seleção de genero ou mais avaliados -->
-        <aside>
             <img src="imagens/Logo.png" alt="" id="logo">
+            <h1>Generos</h1>
+            <ul>
+                <li><a id="acao" href="#">Ação</a></li>
+                <li><a id="aventura" href="#">Aventura</a></li>
+                <li><a id="comedia" href="#">Comédia</a></li>
+                <li><a id="documentario" href="#">Documentário</a></li>
+                <li><a id="drama" href="#">Drama</a></li>
+                <li><a id="ficcao_cientifica" href="#">Ficção científica</a></li>
+                <li><a id="romance" href="#">Romance</a></li>
+                <li><a id="suspense" href="#">Suspense</a></li>
+                <li><a id="terror" href="#">Terror</a></li>
+            </ul>
+            <hr>
+            </hr>
+        </nav>
+    </div>
 
-        </aside>
-        
-        <!-- Modal para cadastro -->
-        <div id="modal_cadastro" class="modal_container">
-            <div class="modal">
-                <h2>Cadastrar</h2>
-                <form action="">
-                    <input id="nome" maxlength="15" type="text" class="nomeU" placeholder="Nome de usuário">
-                    <input id="email" maxlength="50" type="email" class="e-mail" placeholder="E-mail">
-                    <input id="senha1" maxlength="20" type="password" class="senha" placeholder="Senha(mínimo 4 caracteres)">
-                    <input id="senha2" maxlength="20"type="password" class="cSenha" placeholder="confirme a senha">
-                </form>
-                <h4><a href="">Cancelar</a></h4>
-                <div id="criar" class="botao"><a href="#modal_cadastro">Criar</a></div>
-                <div class="gradiente_lateral"></div>
-            </div> 
+    <!-- Modal para cadastro -->
+    <div id="modal_cadastro" class="modal_container">
+        <div class="modal">
+            <h2>Cadastrar</h2>
+            <form action="">
+                <input id="nome" maxlength="15" type="text" class="nomeU" placeholder="Nome de usuário">
+                <input id="email" maxlength="50" type="email" class="e-mail" placeholder="E-mail">
+                <input id="senha1" maxlength="20" type="password" class="senha"
+                    placeholder="Senha(mínimo 4 caracteres)">
+                <input id="senha2" maxlength="20" type="password" class="cSenha" placeholder="confirme a senha">
+            </form>
+            <h4><a href="">Cancelar</a></h4>
+            <div id="criar" class="botao"><a href="#modal_cadastro">Criar</a></div>
+            <div class="gradiente_lateral"></div>
         </div>
+    </div>
 
-        <!-- Modal para login -->
-        <div id="modal_login" class="modal_container">
-            <div class="modal">
-                <h2>Entrar</h2>
-                <form action="">
-                    <input id="email_login" maxlength="50" type="email" class="e-mail" placeholder="E-mail">
-                    <input id="senha_login" maxlength="20" type="password" class="senha" placeholder="Senha">
-                </form>
-                <h4><a href="#modal_cadastro">Primeiro acesso?</a></h4>
-                <div id="logar" class="botao"><a href="#modal_login">Entrar</a></div>
-                <div class="gradiente_lateral"></div>
-            </div> 
+    <!-- Modal para login -->
+    <div id="modal_login" class="modal_container">
+        <div class="modal">
+            <h2>Entrar</h2>
+            <form action="">
+                <input id="email_login" maxlength="50" type="email" class="e-mail" placeholder="E-mail">
+                <input id="senha_login" maxlength="20" type="password" class="senha" placeholder="Senha">
+            </form>
+            <h4><a href="#modal_cadastro">Primeiro acesso?</a></h4>
+            <div id="logar" class="botao"><a href="#modal_login">Entrar</a></div>
+            <div class="gradiente_lateral"></div>
         </div>
-        
-                    
-        <script src="JavaScript/index.js"></script>
-    </body>
+    </div>
+
+
+    
+    
+</body>
+
 </html>

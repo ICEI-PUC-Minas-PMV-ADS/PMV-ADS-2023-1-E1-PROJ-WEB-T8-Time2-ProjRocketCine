@@ -1,44 +1,46 @@
-*{
+* {
     box-sizing: border-box;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
 }
 
-body{
+body {
     background-color: #232428;
     display: flex;
     flex-direction: column;
     width: 99vw;
-    height: 100vh;
+    background-image: linear-gradient(180deg, rgba(33, 137, 228, 0.05) 35.42%, rgba(244, 130, 37, 0.05) 100%);
 }
 
 /* topbar */
-nav {
+header {
     background-color: #2567AA;
     width: 78%;
-    height: 8%;
+    height: 8vh;
     align-self: flex-end;
     margin-right: 2%;
     margin-top: 1%;
     border-radius: 32px;
     top: 0%;
-    min-height: 8%;
-
+    min-height: 8vh;
+    box-shadow: 20px 20px 30px #101113;
+    position:relative;
 }
 
 
-.logar{
+.logar {
     display: none;
     transition: 5s;
 }
 
-nav .entrar_cadastrar{
+header .entrar_cadastrar {
     width: 10.2%;
     margin-top: 1.8%;
     margin-right: 2%;
     float: right;
 }
 
-nav #cadastrar{
+header #cadastrar {
     color: white;
     text-decoration: none;
     margin-right: 0%;
@@ -47,7 +49,7 @@ nav #cadastrar{
 
 }
 
-nav #entrar{
+header #entrar {
     color: white;
     text-decoration: none;
     float: right;
@@ -57,7 +59,7 @@ nav #entrar{
 }
 
 /* Criando menu e imagem de perfil */
-nav .perfil{
+header .perfil {
     width: 5%;
     margin-top: 0.7%;
     margin-right: 2%;
@@ -67,25 +69,27 @@ nav .perfil{
 }
 
 /* Animação ao clicar no perfil */
-@keyframes perfil{
-    0%{
+@keyframes perfil {
+    0% {
         width: 70%;
     }
-    50%{
+
+    50% {
         width: 72.5%;
     }
-    100%{
+
+    100% {
         width: 75%;
     }
 }
 
 
-nav .perfil #foto_perfil{
+header .perfil #foto_perfil {
     float: left;
     width: 75%;
 }
 
-nav .perfil #seta{
+header .perfil #seta {
     float: left;
     margin-top: 30%;
     margin-left: 4%;
@@ -93,12 +97,12 @@ nav .perfil #seta{
     filter: invert(100%);
 }
 
-nav summary{
-    list-style: none; 
+header summary {
+    list-style: none;
 }
 
 /* Configurações do menu de úsuario */
-nav .menu{
+header .menu {
     margin-left: -4%;
     padding: 0;
     margin-top: 3.6%;
@@ -108,7 +112,7 @@ nav .menu{
     border: .1px solid #646464;
 }
 
-nav .menu::before{
+header .menu::before {
     content: '';
     position: absolute;
     top: -4.5%;
@@ -118,12 +122,12 @@ nav .menu::before{
     border-color: transparent transparent #2d2d2e transparent;
 }
 
-nav .menu a{
+header .menu a {
     color: white;
     text-decoration: none;
 }
 
-nav .menu h2 {
+header .menu h2 {
     color: white;
     font-size: 1rem;
     margin-left: 10%;
@@ -131,14 +135,14 @@ nav .menu h2 {
     font-family: sans-serif;
 }
 
-nav .menu hr{
+header .menu hr {
     margin-top: 6%;
     height: 1.2px;
     background-color: #646464;
     border: none;
 }
 
-nav .menu p {
+header .menu p {
     color: white;
     margin-left: 10%;
     margin-top: 10%;
@@ -146,19 +150,20 @@ nav .menu p {
     font-family: sans-serif;
 }
 
-nav .menu li a:link, nav .menu li a:visited{
+header .menu li a:link,
+header .menu li a:visited {
     display: inline-block;
     padding: 4% 1rem;
     width: 100%;
     box-sizing: border-box;
 }
 
-nav .menu li a:hover{
+header .menu li a:hover {
     color: white;
     background-color: #2567AA;
 }
 
-nav .menu li{
+header .menu li {
     list-style: none;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -168,48 +173,200 @@ nav .menu li{
 }
 
 
-nav .menu li img{
+header .menu li img {
     width: 10%;
     filter: invert(100%);
 }
 
-/* Conteudo do site */
-#conteudo{
-    background: linear-gradient(180deg, rgba(33, 137, 228, 0.05) 35.42%, rgba(244, 130, 37, 0.05) 100%);
-    width: 78%;
-    align-self: flex-end;
-    margin-right: 2%;
-    margin-top: 2%;
-    border-top: 2px solid white;
-    border-radius: 32px 32px 0 0;
-    box-shadow: 20px 20px 30px #101113,
-    -20px -20px 30px #161719;
+header ul {
+    float: left;
+    font-size: 1.2rem;
+    margin-top: 1.7%;
+    margin-left: 2%;
+    width: 20%;
+}
+
+header ul li {
+    display: inline;
+    padding: 2%;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+header ul a:focus {
+    display: inline-block;
+    box-sizing: border-box;
+    border-bottom: 2px solid #F4A645;
+    color: #F4A645;
+}
+
+
+header ul a:link,
+nav ul a:visited {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+header ul a:hover {
+    border-bottom: 2px solid #F4A645;
+    color: #F4A645;
 
 }
 
+header input::placeholder {
+    color: rgb(201, 200, 200);
+}
+
+header input:focus {
+    outline: 0;
+}
+
+header input {
+    margin-top: 1.2%;
+    margin-left: 1%;
+    color: white;
+    border-radius: 10px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid white;
+    width: 55%;
+    height: 45%;
+    padding-left: 3%;
+    box-shadow: inset 0px 0px 20px -5px rgba(0, 0, 0, 0.25);
+    background-color: rgba(37, 38, 43, 0.1);
+    background-image: url("../imagens/lupa.png");
+    background-repeat: no-repeat;
+    background-size: 2.5%;
+    background-position-x: 1.5%;
+    background-position-y: 50%;
+}
+
+
+/* Conteudo do site */
+#conteudo {
+    width: 78%;
+    align-self: flex-end;
+    margin-top: 2%;
+    margin-right: 2%;
+    text-align: center;
+}
+
+#conteudo ul{
+    display:inline-block;
+    width: 13%;
+    height: 1%;
+    margin: 15px;
+    
+  }
+  
+  
+  #conteudo li{
+    color: black;
+    list-style: none;
+  }
+
+  #conteudo img{
+    margin-left: 1%;
+  }
+
+  #conteudo p{
+    float: left;
+    margin-left: 1.5%;
+  }
+
+
 /* Barra lateral com menu de opçoes de genero */
-aside{
+
+#nav_gradient {
     border-radius: 32px;
-    background-color: #202124;
-    width: 16%;
-    height: 98%;
+    background-color: white;
+    padding-left: 0.1%;
+    padding-right: 0.1%;
+    width: 16.2%;
+    height: 100%;
     margin-top: 1%;
     margin-left: 2%;
-    border-left: 2px solid #2567AA;
-    border-right: 2px solid #2567AA;
-    box-shadow: 20px 20px 30px #101113,
-    -20px -20px 30px #161719;
+    box-shadow: 20px 20px 30px #101113, -20px -20px 30px #161719;
+    background-image: linear-gradient(180deg, #2567AA 0%, #F48225 100%);
     position: fixed;
 }
 
-aside #logo{
+nav {
+    border-radius: 32px;
+    background-color: #202124;
+    width: 98.5%;
+    height: 100vh;
+    margin-top: 0%;
+    margin-left: 0%;
+    position: absolute;
+}
+
+nav #logo {
     margin-top: 15%;
     margin-left: 5%;
 }
 
 
+nav ul {
+    list-style: none;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+nav ul li {
+    padding: 3%;
+}
+
+nav ul a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+    font-family: sans-serif;
+}
+
+nav ul a:focus {
+    display: inline-block;
+    width: 80%;
+    box-sizing: border-box;
+    border-right: 2px solid #F4A645;
+    color: #F4A645;
+}
+
+
+nav ul a:link,
+nav ul a:visited {
+    display: inline-block;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+nav ul a:hover {
+    border-right: 2px solid #F4A645;
+    color: #F4A645;
+}
+
+nav h1 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 14%;
+    margin-top: 14%;
+}
+
+nav hr {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
 /* Estilização do modal de login e cadastro */
-.modal_container{
+.modal_container {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 60%);
@@ -222,20 +379,22 @@ aside #logo{
 
 
 /* Animação para abrir o modal */
-@keyframes modal{
-    from{
+@keyframes modal {
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
-.mostrar{
+
+.mostrar {
     display: flex;
     animation: modal .3s;
 }
 
-.modal{
+.modal {
     background-color: #202124;
     width: 30%;
     height: 50%;
@@ -244,7 +403,7 @@ aside #logo{
 }
 
 /* Cadastrar*/
-.modal h2{
+.modal h2 {
     margin-left: 14%;
     margin-top: 3.5%;
     position: absolute;
@@ -253,33 +412,33 @@ aside #logo{
 }
 
 /* Botão de cancelar */
-.modal h4{
+.modal h4 {
     margin-left: 19%;
     margin-top: 19.9%;
     font-size: larger;
     position: absolute;
 }
 
-#modal_login .modal h4{
+#modal_login .modal h4 {
     margin-left: 17.5%;
     margin-top: 16%;
     font-size: medium;
     position: absolute;
 }
 
-.modal h4 a{
+.modal h4 a {
     color: white;
     text-decoration: none;
     font-family: sans-serif;
 }
 
-.modal h4 a:hover{
+.modal h4 a:hover {
     color: #d3d3d3;
-    
+
 }
 
 /* Botão de cadastrar e entrar */
-.modal .botao{
+.modal .botao {
     border: 2px solid white;
     text-align: center;
     margin-left: 24.2%;
@@ -290,7 +449,7 @@ aside #logo{
     position: absolute;
 }
 
-#modal_login .modal .botao{
+#modal_login .modal .botao {
     border: 2px solid white;
     text-align: center;
     margin-left: 24.2%;
@@ -301,26 +460,26 @@ aside #logo{
     position: absolute;
 }
 
-.modal .botao a{
+.modal .botao a {
     color: white;
     text-decoration: none;
     font-family: sans-serif;
 }
 
-.modal .botao a:hover{
+.modal .botao a:hover {
     color: #d3d3d3;
-    
+
 }
 
 /* Estilização das entradas do formulario de cadastro/login */
-.modal form{
+.modal form {
     float: right;
     width: 60%;
     height: 60%;
     margin-top: 15%;
 }
 
-.modal form input{
+.modal form input {
     width: 85%;
     padding: 4%;
     margin-top: 7%;
@@ -329,28 +488,34 @@ aside #logo{
     margin-left: 8%;
 }
 
+.modal form input:focus {
+    outline: 0;
+}
+
 /* Animação e classe para exibição de erro ao digitar errado senha ou email */
-@keyframes erro{
+@keyframes erro {
     0% {
         border: 2px solid rgba(252, 58, 58, 0.747);
         background-color: rgba(250, 181, 181, 0.747);
     }
+
     50% {
         background-color: rgba(255, 255, 255, 0.747);
         border: 2px solid rgba(255, 255, 255, 0.747);
     }
+
     100% {
         border: 2px solid rgba(252, 58, 58, 0.747);
     }
 }
 
-.erro{
+.erro {
     animation: erro 1s;
 
     animation-fill-mode: forwards;
 }
 
-.modal .gradiente_lateral{
+.modal .gradiente_lateral {
     float: left;
     width: 40%;
     height: 100%;
@@ -360,7 +525,4 @@ aside #logo{
 }
 
 
-#conteudo #testando{
-    height: 500px;
-    width: 500px;
-}
+
