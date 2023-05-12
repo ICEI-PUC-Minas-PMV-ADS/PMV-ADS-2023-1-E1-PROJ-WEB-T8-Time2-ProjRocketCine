@@ -3,10 +3,10 @@ var list_id_series = []
 
 // Links para a solicitação de filmes
 const url_popularity_movie = 'https://moviesminidatabase.p.rapidapi.com/movie/order/byPopularity/'
-const url_a = 'https://moviesminidatabase.p.rapidapi.com/movie/byGen/Adventure/';
 
 // Links para a solicitação de series
 const url_popularity_serie = 'https://moviesminidatabase.p.rapidapi.com/series/order/byPopularity/';
+
 
 const options = {
     method: 'GET',
@@ -18,7 +18,7 @@ const options = {
 
 
 // Coleta os dados de cada filme ou série com base na lista de ids list_id
-async function print_movies(url_movies) {
+async function print_midia(url_movies) {
     try {
         const response = await fetch(url_movies, options);
         const result = await response.json();
@@ -33,16 +33,24 @@ async function print_movies(url_movies) {
         const ano = result.results.year
         const tipo = result.results.type
 
-        document.getElementById('conteudo').innerHTML += `<ul id="${id}"
-        <ul>
-        <li><img src='${img}'><p>${titulo}</p></li>
-        </ul>`
+        const responses = await fetch(img)
+        if (responses.status != 404) {
+            console.log(responses.status)
+
+            document.getElementById('conteudo').innerHTML += `
+            <ul id="${id}">
+                <div>
+                    <h1>${classificacao}</h1>
+                </div>
+                <li><img src='${img}'><p>${titulo}</p></li>
+            </ul>
+            `
+        }
 
     } catch (error) {
         console.error(error);
     }
 }
-
 
 
 // Filtra os ids para realizar coleta dos dados de cada filme ou série
@@ -60,15 +68,10 @@ async function id_movies(url, list_id) {
 
 
         // Varre a lista a lista de ids e busca o filme ou série
+        list_id_movies = []
         for (var i = 1; i <= list_id.length; i++) {
-            try{
-                print_movies(`https://moviesminidatabase.p.rapidapi.com/movie/id/${list_id[i - 1]}/`)
-            }catch(err){
-                
-            }
-
+            print_midia(`https://moviesminidatabase.p.rapidapi.com/movie/id/${list_id[i - 1]}/`)
         }
-
 
     } catch (error) {
         console.error(error);
@@ -90,12 +93,10 @@ async function id_series(url, list_id) {
         })
 
         // Varre a lista a lista de ids e busca o filme ou série
+        list_id_series = []
         for (var i = 1; i <= list_id.length; i++) {
-            try{
-                print_movies(`https://moviesminidatabase.p.rapidapi.com/series/id/${list_id[i - 1]}/`)
-            }catch(err){
 
-            }
+            print_midia(`https://moviesminidatabase.p.rapidapi.com/series/id/${list_id[i - 1]}/`)
 
         }
 
@@ -104,7 +105,71 @@ async function id_series(url, list_id) {
     }
 }
 
+function limpar() {
+    conteudo.innerHTML = ''
+}
 
-id_movies(url_popularity_movie, list_id_movies)
+
+// Filtra os ids para realizar coleta dos dados de cada filme ou série de um genero
+async function id_genero_filmes(url, list_id) {
+    try {
+        const response = await fetch(url, options)
+        const result = await response.json()
+
+        result.results.map((results) => {
+
+            const id = results.imdb_id
+            list_id.push(id)
+
+        })
+
+        // Varre a lista de ids e busca o genero
+        list_id_movies = []
+        for (var i = 1; i <= list_id.length; i++) {
+            print_midia(`https://moviesminidatabase.p.rapidapi.com/movie/byGen/${list_id[i - 1]}/`)
+        }
+
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+
+// Filtra os ids para realizar coleta dos dados de cada filme ou série de um genero
+async function id_genero_series(url, list_id) {
+    try {
+        const response = await fetch(url, options)
+        const result = await response.json()
+
+        result.results.map((results) => {
+
+            const id = results.imdb_id
+            list_id.push(id)
+
+        })
+
+        // Varre a lista de ids e busca o genero
+        list_id_movies = []
+        for (var i = 1; i <= list_id.length; i++) {
+            print_midia(`https://moviesminidatabase.p.rapidapi.com/series/byGen/${list_id[i - 1]}/`)
+        }
+
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+
+
+const conteudo = document.getElementById('conteudo')
+
+// Função para requisitar os filmes
+function printar_conteudos(funcao, url, lista) {
+    if (conteudo.childNodes.length === 0) {
+        funcao(url, lista)
+    }
+}
+
 
 id_series(url_popularity_serie, list_id_series)
+id_movies(url_popularity_movie, list_id_movies)

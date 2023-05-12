@@ -22,34 +22,35 @@
         </div>
 
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Filmes</a></li>
-            <li><a href="#">Séries</a></li>
+            <li class="home" id="home"><a href="#" onclick="limpar(), printar_conteudos(id_movies, url_popularity_movie, list_id_movies), printar_conteudos(id_series, url_popularity_serie, list_id_series)">Home</a></li>
+            <li class="home" id="filmes"><a href="#" onclick="limpar(), printar_conteudos(id_movies, url_popularity_movie, list_id_movies)">Filmes</a></li>
+            <li class="home" id="series"><a href="#" onclick="limpar(), printar_conteudos(id_series, url_popularity_serie, list_id_series)">Séries</a></li>
         </ul>
 
         <input type="text" placeholder="Pesquisar">
 
+
+
+        <details class="perfil logar" id="perfilID">
+            <summary>
+                <img src="imagens/man.png" alt="" id="foto_perfil">
+                <img src="imagens/down-filled-triangular-arrow.png" alt="" id="seta">
+            </summary>
+
+            <ul class="menu">
+                <p>entrou como</p>
+                <h2 class="quem_entrou"></h2>
+                <hr>
+                </hr>
+                <li><a href="#">Configurações</a></li>
+                <li><a href="#">Favoritos</a></li>
+                <li><a href="#">Minhas avaliações</a></li>
+                <li><a href="Index.html">Sair <img src="imagens/logout.png" alt=""></a></li>
+            </ul>
+
+        </details>
+        </nav>
     </header>
-
-    <details class="perfil logar" id="perfilID">
-        <summary>
-            <img src="imagens/man.png" alt="" id="foto_perfil">
-            <img src="imagens/down-filled-triangular-arrow.png" alt="" id="seta">
-        </summary>
-
-        <ul class="menu">
-            <p>entrou como</p>
-            <h2 class="quem_entrou"></h2>
-            <hr>
-            </hr>
-            <li><a href="#">Configurações</a></li>
-            <li><a href="#">Favoritos</a></li>
-            <li><a href="#">Minhas avaliações</a></li>
-            <li><a href="">Sair <img src="imagens/logout.png" alt=""></a></li>
-        </ul>
-
-    </details>
-    </nav>
 
     <!-- Onde ficará todo cinteudo do site -->
     <div id="conteudo">
