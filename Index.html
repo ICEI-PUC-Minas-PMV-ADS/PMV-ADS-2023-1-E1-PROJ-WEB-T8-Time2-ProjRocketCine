@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     Bootstrap -->
+
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/responsividade.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,23 +21,22 @@
     <title>RocketCine</title>
 </head>
 
+
 <body>
     <!-- Barra superior do site -->
-    <header>
+    <header id="ttt">
         <div class="entrar_cadastrar" id="entrar_cadastrarID">
             <a href="#modal_login" id="entrar">Entrar</a>
             <a href="#modal_cadastro" id="cadastrar">Cadastrar</a>
         </div>
 
         <ul>
-            <li class="home" id="home"><a href="#" onclick="limpar(), printar_conteudos(id_movies, url_popularity_movie, list_id_movies), printar_conteudos(id_series, url_popularity_serie, list_id_series)">Home</a></li>
-            <li class="home" id="filmes"><a href="#" onclick="limpar(), printar_conteudos(id_movies, url_popularity_movie, list_id_movies)">Filmes</a></li>
+            <li class="home" id="home"><a href="#" onclick="limpar(), printar_conteudos(id_movies, url_popularity_movie, lista_de_id_filmes), printar_conteudos(id_series, url_popularity_serie, list_id_series)">Home</a></li>
+            <li class="home" id="filmes"><a href="#" onclick="limpar(), printar_conteudos(id_movies, url_popularity_movie, lista_de_id_filmes)">Filmes</a></li>
             <li class="home" id="series"><a href="#" onclick="limpar(), printar_conteudos(id_series, url_popularity_serie, list_id_series)">Séries</a></li>
         </ul>
 
         <input type="text" placeholder="Pesquisar">
-
-
 
         <details class="perfil logar" id="perfilID">
             <summary>
@@ -53,7 +60,36 @@
     </header>
 
     <!-- Onde ficará todo cinteudo do site -->
-    <div id="conteudo">
+    <div id="filmes_conteudo">
+        <!--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="imagens/O_hobbit.jpg" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>O hobbit</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="imagens/jogador_1.jpg" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>O jogador número 1</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="imagens/O_lagosta.jpg" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>O lagosta</h5>
+                </div>
+              </div>
+            </div>
+          </div>-->
+          <div id="conteudo">
+          </div>
     </div>
 
     <!-- Barra lateral com menu de seleção de genero ou mais avaliados -->
@@ -106,9 +142,7 @@
                 <div id="logar" class="botao"><a href="#modal_login">Entrar</a></div>
                 <div class="gradiente_lateral"></div>
             </div> 
-        </div>
-        
-                    
+        </div>                    
         <script src="JavaScript/index.js"></script>
     </body>
 </html>

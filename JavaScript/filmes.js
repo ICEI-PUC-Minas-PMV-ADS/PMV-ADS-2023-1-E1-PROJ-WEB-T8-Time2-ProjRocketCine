@@ -1,4 +1,4 @@
-var list_id_movies = []
+var lista_de_id_filmes = []
 var list_id_series = []
 
 // Links para a solicitação de filmes
@@ -32,14 +32,16 @@ async function print_midia(url_movies) {
         const sinopse = result.results.description
         const ano = result.results.year
         const tipo = result.results.type
+        const genero = result.results.gen
+
+        const id_e_tipo_filme = `${id} ${tipo}`
 
         const responses = await fetch(img)
         if (responses.status != 404) {
-            console.log(responses.status)
 
             document.getElementById('conteudo').innerHTML += `
-            <ul id="${id}">
-                <div>
+            <ul id="${id_e_tipo_filme}" onclick="detalhes_filme(this.id)">
+                <div class="classificacao">
                     <h1>${classificacao}</h1>
                 </div>
                 <li><img src='${img}'><p>${titulo}</p></li>
@@ -52,6 +54,67 @@ async function print_midia(url_movies) {
     }
 }
 
+ 
+async function pagina_filmes(url){
+    try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+
+        const id = result.results.imdb_id
+        const titulo = result.results.title
+        const img = result.results.image_url
+        const trailer = result.results.trailer
+        const classificacao = result.results.rating
+        const duracao = result.results.movie_length
+        const sinopse = result.results.description
+        const ano = result.results.year
+        const tipo = result.results.type
+        const genero = result.results.gen
+
+        const id_e_tipo_filme = `${id} ${tipo}`
+
+        const responses = await fetch(img)
+        if (responses.status != 404) {
+
+            document.getElementById('conteudo').innerHTML += `
+            <div id='teste'></div>
+            `
+
+
+            document.getElementById('teste').innerHTML += `
+
+            <ul id="${id_e_tipo_filme}" onclick="detalhes_filme(this.id)" class="filme">
+                <li><img src='${img}'><p id="titulo">${titulo}</p></li>
+            </ul>
+            `
+            console.log(trailer)
+            document.getElementById('teste').innerHTML += `
+                <h2>Sinopse</h2>
+                <div class="classificacao">
+                    <h1>${classificacao}</h1>
+                </div>
+                <div class="sinopse">
+                    <p>${sinopse}</p>
+                </div>
+                <h3>Elenco</h3>
+                <iframe width="340" height="200" src="${trailer}" frameborder="0">
+                </<iframe>
+                
+            `
+
+
+
+
+
+
+        }
+
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+
 
 // Filtra os ids para realizar coleta dos dados de cada filme ou série
 async function id_movies(url, list_id) {
@@ -63,12 +126,10 @@ async function id_movies(url, list_id) {
 
             const id = results.imdb_id
             list_id.push(id)
-
         })
 
-
         // Varre a lista a lista de ids e busca o filme ou série
-        list_id_movies = []
+        d = []
         for (var i = 1; i <= list_id.length; i++) {
             print_midia(`https://moviesminidatabase.p.rapidapi.com/movie/id/${list_id[i - 1]}/`)
         }
@@ -105,58 +166,25 @@ async function id_series(url, list_id) {
     }
 }
 
+
 function limpar() {
     conteudo.innerHTML = ''
 }
 
 
-// Filtra os ids para realizar coleta dos dados de cada filme ou série de um genero
-async function id_genero_filmes(url, list_id) {
-    try {
-        const response = await fetch(url, options)
-        const result = await response.json()
+// Printando filme clicado para informações
+function detalhes_filme(id){
+    limpar()
+    id_e_tipo_filme = id.split(' ')
+    tipo_filme = id_e_tipo_filme[1]
+    console.log(id)
 
-        result.results.map((results) => {
-
-            const id = results.imdb_id
-            list_id.push(id)
-
-        })
-
-        // Varre a lista de ids e busca o genero
-        list_id_movies = []
-        for (var i = 1; i <= list_id.length; i++) {
-            print_midia(`https://moviesminidatabase.p.rapidapi.com/movie/byGen/${list_id[i - 1]}/`)
-        }
-
-    } catch (error) {
-        console.error(error);
+    if(tipo_filme === 'series'){
+        pagina_filmes(`https://moviesminidatabase.p.rapidapi.com/series/id/${id_e_tipo_filme[0]}/`)
+    }else{
+        pagina_filmes(`https://moviesminidatabase.p.rapidapi.com/movie/id/${id_e_tipo_filme[0]}/`)
     }
-}
-
-
-// Filtra os ids para realizar coleta dos dados de cada filme ou série de um genero
-async function id_genero_series(url, list_id) {
-    try {
-        const response = await fetch(url, options)
-        const result = await response.json()
-
-        result.results.map((results) => {
-
-            const id = results.imdb_id
-            list_id.push(id)
-
-        })
-
-        // Varre a lista de ids e busca o genero
-        list_id_movies = []
-        for (var i = 1; i <= list_id.length; i++) {
-            print_midia(`https://moviesminidatabase.p.rapidapi.com/series/byGen/${list_id[i - 1]}/`)
-        }
-
-    } catch (error) {
-        console.error(error);
-    }
+    
 }
 
 
@@ -172,4 +200,4 @@ function printar_conteudos(funcao, url, lista) {
 
 
 id_series(url_popularity_serie, list_id_series)
-id_movies(url_popularity_movie, list_id_movies)
+// id_movies(url_popularity_movie, lista_de_id_filmes)
