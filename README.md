@@ -11,7 +11,6 @@ O projeto tem como foco o compartilhamento de críticas e avaliações dos usuá
 ## Integrantes
 
 * Bruno Henrique Arantes Dias 
-* Leonardo Gabriel de Matos Campos 
 * Pedro Ferreira Andrade 
 * Wesley Correa Gomes
 
