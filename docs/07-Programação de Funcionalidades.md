@@ -2,14 +2,96 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="5-Arquitetura da Solução.md"> Arquitetura da Solução</a>
 
-Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
+Nesta seção serão apresentadas as telas desenvolvidas para cada uma das funcionalidades do sistema, especificadas durante os Requisitos Funcionais.
 
-Para cada requisito funcional, pode ser entregue um artefato desse tipo
+## Cabeçalho e Barra Lateral (RF-03, RF-09)
 
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+Para uma melhor organização dos elementos que estariam presentes em todas as páginas do projeto, criamos um cabeçalho e uma barra lateral onde estarão alocadas algumas das funcionalidades do site. No cabeçalho, estão presentes o botão “Home”, os botões de filtragem entre filmes e séries, a barra de pesquisa e os sistemas de login e cadastro. Já na barra lateral, foi inserida a lista de filtragem por gênero.
+Para uma melhor visualização, ambas as estruturas estão apresentadas na página estrutural do site que está a seguir:
+
+<img src="./img/cabecalho-barra-lateral.png">
+
+### Responsável pela Funcionalidade
+* Wesley Correa Gomes
+
+### Requisitos Atendidos
+* RF- 03 - mecanismo de pesquisa e filtragem
+* RF-09 - botão home
+
+### Artefatos da Funcionalidade
+* Index.html
+* Index.css
+* Index.js
+* filmes.js
+
+## Sistema de Cadastro/Login (RF-04)
+
+O campo de cadastro permite que o usuário crie uma conta inserindo informações pessoais como, nome completo, e-mail, senha com no mínimo 4 caracteres e confirmação de senha. Já na janela de login, estão presentes o campo para inserir o nome de usuário e a senha, além de um botão que leva para a tela de cadastro, caso o usuário ainda não o tenha realizado.
+
+<img src="./img/Cadastrar.png">
+
+<img src="./img/Logar.png">
+
+### Responsável pela Funcionalidade
+* Wesley Correa Gomes
+
+### Requisitos Atendidos
+* RF-04 - Login/Cadastro
+
+### Artefatos da Funcionalidade
+* Index.html
+* Index.css
+* Index.js
+
+## Carrossel de Destaques (RF-07)
+
+O carrossel de filmes e séries em destaque exibe banners dos principais filmes do momento a paratir de um sistema de rolagem automática.
+
+<img src="./img/carrousel.png">
+
+### Responsável pela Funcionalidade
+* Pedro Ferreira Andrade
+
+### Requisitos Atendidos
+* RF-10 - Carrossel de Filmes em Destaque
+
+### Artefatos da Funcionalidade
+* Index.html
+* Index.css
+* Index.js
+
+## Catálogo de Filmes (RF-06)
+
+O catálogo de filmes tem como o objetivo auxiliar usuários a uma melhor interação com a plataforma, apresentando a lista de filmes disponível junto com suas respectivas capas, avaliações e títulos.
+
+<img src="./img/catalogo.png">
+
+### Responsável pela Funcionalidade
+* Bruno Henrique Arantes Dias
+
+### Requisitos Atendidos
+* RF-06 - Catálogo de Filmes/séries
+
+### Artefatos da Funcionalidade
+* Index.html
+* Index.css
+* Index.js
+* Filmes.js
+
+## Especificações do Filme (RF-05)
+
+Espaço destinado a apresentar as informações técnicas sobre cada filme individualmente, bem como avaliações, trailer, sinopse, duração, ano, tipo e gêneros.
+
+<img src="./img/especificacoesfilme.png">
+
+### Responsável pela Funcionalidade
+* Pedro Ferreira Andrade
+
+### Requisitos Atendidos 
+* RF-05 - Especificações do Filme
+
+### Artefatos da Funcionalidade
+* Index.html
+* Index.css
+* Index.js
+* Filmes.js
