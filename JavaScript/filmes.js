@@ -70,7 +70,7 @@ async function pagina_filmes(url){
         const ano = result.results.year
         const tipo = result.results.type
         const genero = result.results.gen
-
+        
         const id_e_tipo_filme = `${id} ${tipo}`
 
         const responses = await fetch(img)
@@ -79,7 +79,13 @@ async function pagina_filmes(url){
             document.getElementById('conteudo').innerHTML += `
             <div id='teste'></div>
             `
-
+            function genero_f(){
+                for(i = 1; i<= genero.length; i++){ 
+                    document.getElementById('genero').innerHTML += `
+                        <li><p>${genero[i - 1].genre}</p></li>
+                        `
+                }
+            }
 
             document.getElementById('teste').innerHTML += `
 
@@ -87,25 +93,38 @@ async function pagina_filmes(url){
                 <li><img src='${img}'><p id="titulo">${titulo}</p></li>
             </ul>
             `
-            console.log(trailer)
+
+            
+
             document.getElementById('teste').innerHTML += `
-                <h2>Sinopse</h2>
+                <h2>Sinopse:</h2>
+
                 <div class="classificacao">
                     <h1>${classificacao}</h1>
                 </div>
+
                 <div class="sinopse">
                     <p>${sinopse}</p>
                 </div>
-                <h3>Elenco</h3>
+
+                <ul id="genero">
+                </ul>
+
+                <div class='informacoes'>
+                <ul>
+                <li><p><strong>Duração:</strong> ${duracao}mn<p></li>
+                <li><p><strong>Ano:</strong> ${ano}mn<p></li>
+                <li><p><strong>Tipo:</strong> ${tipo}mn<p></li>
+                <li><p><p><strong>Tipo:</strong><p></li>
+                </ul>
+                </div>
+
+                <h3>Generos:</h3>
                 <iframe width="340" height="200" src="${trailer}" frameborder="0">
                 </<iframe>
                 
             `
-
-
-
-
-
+            genero_f()
 
         }
 
