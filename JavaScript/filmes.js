@@ -40,7 +40,10 @@ function carrousel(home){
                     <span class="dot"></span>
                     <span class="dot"></span>
             </div>
-            `}else{document.getElementById('testando').innerHTML = ''}
+            ` 
+            showSlides()
+        
+        }else{document.getElementById('testando').innerHTML = ''}
 }
 
 
@@ -229,7 +232,7 @@ function limpar() {
     conteudo.innerHTML = ''
 }
 
-// Printando filme clicado para informações
+// Validando Filme ou série do elemento clicado
 function detalhes_filme(id){
     limpar()
     id_e_tipo_filme = id.split(' ')
@@ -267,7 +270,7 @@ carrousel(1)
 //Carrousel
 
 var slideIndex = 0;
-showSlides();
+
 
 function showSlides() {
     var i;
@@ -283,5 +286,6 @@ function showSlides() {
     }
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 5000); 
+    setTimeout(showSlides, 5000);  
 }
+showSlides();
