@@ -18,32 +18,33 @@ const options = {
 
 
 function carrousel(home){
+   
     if(home == 1){
-    document.getElementById('testando').innerHTML = `
-                <div class="slideshow-container">
-                    <div class="mySlides fade">
-                        <img src="https://i.pinimg.com/originals/ed/95/68/ed9568bd70d70d69fabdd0f07c39e840.jpg" style="width: 100%">
-                        <div class="text">The white shadow</div>
+        document.getElementById('testando').innerHTML = `
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <img src="https://i.pinimg.com/originals/ed/95/68/ed9568bd70d70d69fabdd0f07c39e840.jpg" style="width: 100%">
+                            <div class="text">The white shadow</div>
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="https://vignette.wikia.nocookie.net/x-men/images/f/f1/Wnxwall_1280.jpg/revision/latest?cb=20081227203256" style="width: 100%">
+                            <div class="caption text">Wolverine and the x-men</div>
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="https://image.chilimovie.com/public/1280px/20200507/Abxd55CoyX4yKat0nekwmIpQOso.jpg" style="width: 100%">
+                            <div class="caption text">Tron uprising</div>
+                        </div>
                     </div>
-                    <div class="mySlides fade">
-                        <img src="https://vignette.wikia.nocookie.net/x-men/images/f/f1/Wnxwall_1280.jpg/revision/latest?cb=20081227203256" style="width: 100%">
-                        <div class="caption text">Wolverine and the x-men</div>
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="https://image.chilimovie.com/public/1280px/20200507/Abxd55CoyX4yKat0nekwmIpQOso.jpg" style="width: 100%">
-                        <div class="caption text">Tron uprising</div>
-                    </div>
+                    <br>
+                    <div style="text-align: center">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                 </div>
-                <br>
-                <div style="text-align: center">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-            </div>
-            ` 
-            showSlides()
-        
+                ` 
+                      
         }else{document.getElementById('testando').innerHTML = ''}
+        
 }
 
 
@@ -167,7 +168,6 @@ async function pagina_filmes(url){
                 
             `
             genero_f()
-
         }
 
     } catch (error) {
@@ -270,7 +270,7 @@ carrousel(1)
 //Carrousel
 
 var slideIndex = 0;
-
+showSlides()
 
 function showSlides() {
     var i;
@@ -288,4 +288,3 @@ function showSlides() {
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 5000);  
 }
-showSlides();
