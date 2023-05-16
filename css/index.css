@@ -111,7 +111,7 @@ header .menu {
     padding: 0;
     margin-top: 4.4%;
     position: absolute;
-    background-color: #2d2d2e;
+    background-color: #151518;
     border-radius: 10px;
     border: .1px solid #646464;
 }
@@ -201,13 +201,6 @@ header ul li a {
     font-family: sans-serif;
 }
 
-/*header ul a:focus {
-    display: inline-block;
-    box-sizing: border-box;
-    border-bottom: 2px solid #F4A645;
-    color: #F4A645;
-}*/
-
 
 header ul a:link,
 nav ul a:visited {
@@ -252,8 +245,6 @@ header input {
 
 
 /* Conteudo do site */
-
-
 #filmes_conteudo {
     width: 76%;
     align-self: flex-end;
@@ -271,6 +262,7 @@ header input {
     height: 1%;
     margin: 15px;
     cursor: pointer;
+    
   }
   
   #conteudo li{
@@ -281,8 +273,8 @@ header input {
 
   #conteudo img{
     width: 100%;
-    border: 4px solid white;
     border-radius: 8px;
+    border: 4px solid white;
   }
 
   #conteudo p{

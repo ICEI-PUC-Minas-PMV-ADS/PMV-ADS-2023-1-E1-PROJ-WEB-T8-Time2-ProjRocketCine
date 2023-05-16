@@ -67,7 +67,7 @@ async function print_midia(url_movies, home='') {
         const tipo = result.results.type
         const genero = result.results.gen
 
-        const id_e_tipo_filme = `${id} ${tipo}`
+        const id_e_tipo_filme = `${id}-${tipo}`
 
        
         const responses = await fetch(img)
@@ -75,17 +75,29 @@ async function print_midia(url_movies, home='') {
 
 
             console.log('testando')
+
+
+            document.getElementById('estilo').innerHTML +=`
             
+            #conteudo #${id_e_tipo_filme} img:hover{
+                border: 8px solid white;
+                box-shadow: 1px 1px 5px #F48225, -1px -1px 5px #F48225;
+              }        
+            
+            `
 
             document.getElementById('conteudo').innerHTML += `
-            
+
             <ul id="${id_e_tipo_filme}" onclick="detalhes_filme(this.id)">
                 <div class="classificacao">
                     <h1>${classificacao}</h1>
-                </div>
+                </div>    
                 <li><img src='${img}'><p>${titulo}</p></li>
-            </ul>
+            </ul>    
             `
+
+
+
         }
 
     } catch (error) {
@@ -114,7 +126,7 @@ async function pagina_filmes(url){
             ano = result.results.start_year
         }
         
-        const id_e_tipo_filme = `${id} ${tipo}`
+        const id_e_tipo_filme = `${id}-${tipo}`
 
         const responses = await fetch(img)
         if (responses.status != 404) {
@@ -235,7 +247,7 @@ function limpar() {
 // Validando Filme ou série do elemento clicado
 function detalhes_filme(id){
     limpar()
-    id_e_tipo_filme = id.split(' ')
+    id_e_tipo_filme = id.split('-')
     tipo_filme = id_e_tipo_filme[1]
 
     if(tipo_filme === 'series'){
