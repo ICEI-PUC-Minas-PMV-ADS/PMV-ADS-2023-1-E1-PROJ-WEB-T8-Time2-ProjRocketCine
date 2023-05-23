@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/responsividade.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/responsividade.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="JavaScript/filmes.js" defer></script>
-    <script src="JavaScript/index.js" defer></script>
+    <script src="src/JavaScript/filmes.js" defer></script>
+    <script src="src/JavaScript/index.js" defer></script>
     <title>RocketCine</title>
 </head>
 
@@ -32,8 +32,8 @@
 
         <details class="perfil logar" id="perfilID">
             <summary>
-                <img src="imagens/man.png" alt="" id="foto_perfil">
-                <img src="imagens/down-filled-triangular-arrow.png" alt="" id="seta">
+                <img src="src/imagens/man.png" alt="" id="foto_perfil">
+                <img src="src/imagens/down-filled-triangular-arrow.png" alt="" id="seta">
             </summary>
 
             <ul class="menu">
@@ -44,7 +44,7 @@
                 <li><a href="#">Configurações</a></li>
                 <li><a href="#">Favoritos</a></li>
                 <li><a href="#">Minhas avaliações</a></li>
-                <li><a href="Index.html">Sair <img src="imagens/logout.png" alt=""></a></li>
+                <li><a href="Index.html">Sair <img src="src/imagens/logout.png" alt=""></a></li>
             </ul>
         </details>
     </header>
@@ -76,7 +76,7 @@
     <!-- Barra lateral com menu de seleção de genero ou mais avaliados -->
     <div id="nav_gradient">
         <nav>
-            <img src="imagens/Logo.png" alt="" id="logo" onclick="limpar(), printar_conteudos(id_movies, url_popularity_movie, lista_de_id_filmes), printar_conteudos(id_series, url_popularity_serie, list_id_series), carrousel(1), showSlides()" style="cursor: pointer;">
+            <img src="src/imagens/Logo.png" alt="" id="logo" onclick="limpar(), printar_conteudos(id_movies, url_popularity_movie, lista_de_id_filmes), printar_conteudos(id_series, url_popularity_serie, list_id_series), carrousel(1), showSlides()" style="cursor: pointer;">
             <h1>Generos</h1>
             <ul>
                 <li><a id="acao" href="#">Ação</a></li>
@@ -124,6 +124,6 @@
                 <div class="gradiente_lateral"></div>
             </div> 
         </div>                    
-        <script src="JavaScript/index.js"></script>
+        <script src="src/JavaScript/index.js"></script>
     </body>
 </html>
