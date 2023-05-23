@@ -131,7 +131,7 @@ async function pagina_filmes(url){
         const responses = await fetch(img)
         if (responses.status != 404) {
 
-            
+
             document.getElementById('conteudo').innerHTML += `
             <div id='teste'></div>
             `
@@ -178,6 +178,54 @@ async function pagina_filmes(url){
                 <iframe width="340" height="200" src="${trailer}" frameborder="0">
                 </<iframe>
                 
+            `
+            //comentários
+            document.getElementById('cmt').innerHTML = `
+            <div class="comentario">
+                <div id="corpo">
+                    <section id="geral" class="usuario-avaliacao">
+        
+                        <div class="imagem-usuario">
+                            <img src="man.png">
+                        </div>
+            
+                        <div class="usuario-com"> <!-- automatizar para aparecer o nome do usuário -->
+                            <p>User(Teste)
+            
+                            </p>
+                        </div>
+            
+                        <div class="estrelas">
+                            <ul class="stars">
+                                <li class="star-icon ativo" data-stars="1"></li>
+                                <li class="star-icon" data-stars="2"></li>
+                                <li class="star-icon" data-stars="3"></li>
+                                <li class="star-icon" data-stars="4"></li>
+                                <li class="star-icon" data-stars="5"></li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+        
+                <section class="conteudo-com">
+        
+                    <div class="meucomentario">
+        
+                    </div>
+        
+                    <div class="input-com">
+                        <textarea id="novoComentario" maxlength="300" placeholder="Novo Comentário..."></textarea>
+                        
+                        <div class="btn-com">
+                            <button onclick="nComentario()">Comentar</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        
+            <ul id="comentarios" class="comentario-2">
+            
+            </ul>
             `
             genero_f()
         }
@@ -242,6 +290,7 @@ async function id_series(url, list_id, home='') {
 
 function limpar() {
     conteudo.innerHTML = ''
+    cmt.innerHTML = ''
 }
 
 // Validando Filme ou série do elemento clicado
@@ -299,4 +348,38 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 5000);  
+}
+
+//comentários js
+
+var stars = document.querySelectorAll('.star-icon');
+
+document.addEventListener('click', function(e){
+  var classStar = e.target.classList;
+  if(!classStar.contains('ativo')){
+    stars.forEach(function(star){
+      star.classList.remove('ativo');
+    });
+    classStar.add('ativo');
+    console.log(e.target.getAttribute('data-stars'));
+  }
+});
+
+function nComentario(){
+  let li = document.createElement("li");
+  let valoringressado = document.getElementById("novoComentario").value;
+  let texto = document.createTextNode(valoringressado);
+  var meucomentario = document.getElementById("meucomentario");
+
+  li.appendChild(texto);
+
+  if(valoringressado === ''){
+      alert("Insira um comentário!");
+  } else{
+      document.getElementById("comentarios").appendChild(li);
+      localStorage.setItem("comentario", valoringressado);
+      meucomentario.appendChild(texto);
+}
+  meucomentario.removeChild(texto);
+  li.className = "comentarios";
 }
