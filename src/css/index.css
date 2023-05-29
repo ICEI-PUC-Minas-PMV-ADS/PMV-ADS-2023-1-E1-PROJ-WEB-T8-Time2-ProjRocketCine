@@ -9,9 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 99vw;
-   
 }
-
 
 /* topbar */
 header {
@@ -28,7 +26,6 @@ header {
     position: sticky;
     z-index: 10;
 }
-
 
 .logar {
     display: none;
@@ -57,7 +54,6 @@ header #entrar {
     float: right;
     font-size: 1.2rem;
     font-family: sans-serif;
-
 }
 
 /* Criando menu e imagem de perfil */
@@ -67,8 +63,6 @@ header .perfil {
     margin-right: 2%;
     float: right;
     cursor: pointer;
-    
-
 }
 
 /* Animação ao clicar no perfil */
@@ -85,7 +79,6 @@ header .perfil {
         width: 75%;
     }
 }
-
 
 header .perfil #foto_perfil {
     float: left;
@@ -155,6 +148,7 @@ header .menu p {
 }
 
 header .menu li a:link,
+
 header .menu li a:visited {
     display: inline-block;
     padding: 4% 1rem;
@@ -175,7 +169,6 @@ header .menu li {
     font-family: sans-serif;
     font-style: bold;
 }
-
 
 header .menu li img {
     width: 10%;
@@ -201,8 +194,8 @@ header ul li a {
     font-family: sans-serif;
 }
 
-
 header ul a:link,
+
 nav ul a:visited {
     display: inline-block;
     box-sizing: border-box;
@@ -211,7 +204,6 @@ nav ul a:visited {
 header ul .home a:hover {
     border-bottom: 2px solid #F4A645;
     color: #F4A645;
-
 }
 
 header input::placeholder {
@@ -243,7 +235,6 @@ header input {
     background-position-y: 50%;
 }
 
-
 /* Conteudo do site */
 #filmes_conteudo {
     width: 76%;
@@ -262,21 +253,18 @@ header input {
     height: 1%;
     margin: 15px;
     cursor: pointer;
-    
   }
-  
+
   #conteudo li{
     color: black;
     text-align: left;
     list-style: none;
-    
   }
 
   #conteudo img{
     width: 100%;
     border-radius: 8px;
     box-shadow: -20px 0px 20px #00000086;
-
   }
 
   #conteudo p{
@@ -300,6 +288,7 @@ header input {
     box-shadow: inset 0px -4px 5px #a86026, inset 0px 4px 5px #F4A645;
     cursor:default;
 }
+
 #conteudo h1 {
     margin-top: 22%;
     font-family: sans-serif;
@@ -336,7 +325,6 @@ header input {
     font-family: sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
-
 }
 
 #conteudo #teste .filme{
@@ -350,8 +338,7 @@ header input {
 
 #conteudo #teste .classificacao{
     margin-top: 2.5%;
-    margin-left: 25%;
-    
+    margin-left: 25%; 
 }
 
 #conteudo #teste .sinopse{
@@ -370,14 +357,12 @@ header input {
     margin-top: 3%;
 }
 
-
 #conteudo #teste .sinopse p{
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 7;
     -webkit-box-orient: vertical;
 }
-
 
 #conteudo #teste #titulo{
     font-weight: bold;
@@ -404,7 +389,6 @@ header input {
     border: 1px solid #a86026;
     border-radius: 32px;
     cursor:default;
-    
 }
 
 #conteudo #teste .informacoes{
@@ -415,7 +399,6 @@ header input {
     margin-left: 15%;
     width: 8%;
     text-align: center;
-
 }
 
 #conteudo #teste .informacoes p{
@@ -427,7 +410,6 @@ header input {
 }
 
 /* Barra lateral com menu de opçoes de genero */
-
 #nav_gradient {
     border-radius: 32px 32px 0 0;
     background-color: white;
@@ -488,7 +470,6 @@ nav ul a:visited {
     display: inline-block;
     width: 80%;
     box-sizing: border-box;
-
 }
 
 nav ul a:hover {
@@ -544,7 +525,6 @@ nav hr {
     width: 30%;
     height: 50%;
     border-radius: 20px;
-
 }
 
 /* Cadastrar*/
@@ -579,7 +559,6 @@ nav hr {
 
 .modal h4 a:hover {
     color: #d3d3d3;
-
 }
 
 /* Botão de cadastrar e entrar */
@@ -613,7 +592,6 @@ nav hr {
 
 .modal .botao a:hover {
     color: #d3d3d3;
-
 }
 
 /* Estilização das entradas do formulario de cadastro/login */
@@ -656,7 +634,6 @@ nav hr {
 
 .erro {
     animation: erro 1s;
-
     animation-fill-mode: forwards;
 }
 
@@ -670,7 +647,6 @@ nav hr {
 }
 
 /* Carrousel */
-
 .slideshow-container {
     max-width: 99.9%;
     margin-left: 0.05%;
@@ -722,9 +698,9 @@ nav hr {
   @keyframes fade {
     from{ opacity: 0.4}
     to { opacity: 1}
-  }
-  
-/* Comentando */
+}
+
+/* Comentário */
 #cmt .comentario{
     position: relative;
         top: 0;
@@ -739,15 +715,13 @@ nav hr {
     height: 70px;
     width: 600px;
     border-radius: 10px;
-
 }
 
 #cmt .imagem-usuario{
     float: left;
     margin-top: 6%;
     margin-left: 4%;
-    width: 8%;
-    
+    width: 8%;  
 }
 
 #cmt .imagem-usuario img{
@@ -758,36 +732,6 @@ nav hr {
     position: absolute;
     left: 70px;
     top: 12px;
-}
-
-#cmt .stars{
-    display: flex;
-    width: 18%;
-    margin-left: 14%;
-    padding-top: 7%;
-}
-#cmt .star-icon{
-    list-style-type: none;
-    border: transparent;
-    cursor: pointer;
-    color: #ffe500;
-    font-size: 1.5rem;/* tamanho das estrelas */
-  }
-  #cmt .star-icon::before{
-    content: "\2605";
-  }
-  #cmt .star-icon.ativo ~ .star-icon::before{
-    content: "\2606";
-  }
-  #cmt .avaliacao:hover .star-icon::before{
-    content: "\2605";
-  }
-  #cmt .star-icon:hover ~ .star-icon::before{
-    content: "\2606";
-  }
-
-  #cmt .conteudo-com{
-    margin-top: 2%;
 }
 
 #cmt #novoComentario{
@@ -825,7 +769,38 @@ nav hr {
     color: rgb(255, 255, 255);
 }
 
-/* Comentários */
+/*Estrelas-comentário*/
+#cmt .stars{
+    display: flex;
+    width: 18%;
+    margin-left: 14%;
+    padding-top: 7%;
+}
+
+#cmt .star-icon{
+    list-style-type: none;
+    border: transparent;
+    cursor: pointer;
+    color: #ffe500;
+    font-size: 1.5rem;/* tamanho das estrelas */
+  }
+  #cmt .star-icon::before{
+    content: "\2605";
+  }
+  #cmt .star-icon.ativo ~ .star-icon::before{
+    content: "\2606";
+  }
+  #cmt .avaliacao:hover .star-icon::before{
+    content: "\2605";
+  }
+  #cmt .star-icon:hover ~ .star-icon::before{
+    content: "\2606";
+  }
+  #cmt .conteudo-com{
+    margin-top: 2%;
+}
+
+/* Comentado */
 #comentado .comentario{
     position: relative;
         top: 0;
@@ -840,7 +815,6 @@ nav hr {
     height: 70px;
     width: 600px;
     border-radius: 10px;
-
 }
 
 #comentado .imagem-usuario{
@@ -871,32 +845,6 @@ nav hr {
     font-size: 1.2rem;
 }
 
-#comentado .star-icon{
-    list-style-type: none;
-    border: transparent;
-    cursor: pointer;
-    color: #ffe500;
-    margin-top: -4%;
-    font-size: 1.2rem;/* alterar o tamanho das estrelas */
-  }
-  #comentado .star-icon::before{
-    content: "\2605";
-  }
-  #comentado .star-icon.ativo ~ .star-icon::before{
-    content: "\2606";
-  }
-  #comentado .avaliacao:hover .star-icon::before{
-    content: "\2605";
-  }
-  #comentado .star-icon:hover ~ .star-icon::before{
-    content: "\2606";
-  }
-
-  #comentado .conteudo-com{
-    margin-top: 2%;
-
-}
-
 #comentado textarea{
     border-radius: 10px;
     width: 100%;
@@ -910,11 +858,36 @@ nav hr {
     color: white;
 }
 
+/*Estrelas-comentado*/
+#comentado .star-icon{
+    list-style-type: none;
+    border: transparent;
+    cursor: pointer;
+    color: #ffe500;
+    margin-top: -4%;
+    font-size: 1.2rem;/* tamanho das estrelas */
+  }
+  #comentado .star-icon::before{
+    content: "\2605";
+  }
+  #comentado .star-icon.ativo ~ .star-icon::before{
+    content: "\2606";
+  }
+  #comentado .avaliacao:hover .star-icon::before{
+    content: "\2605";
+  }
+  #comentado .star-icon:hover ~ .star-icon::before{
+    content: "\2606";
+  }
+  #comentado .conteudo-com{
+    margin-top: 2%;
+}
+
 /* Rodapé */
 #rodape{
     text-align: center;
     padding: 4%;
-}
+  }
 
   #rodape h5{
     color: white;
@@ -924,4 +897,4 @@ nav hr {
   #rodape p{
     color: white;
     font-size: .9rem;
-  }
+}

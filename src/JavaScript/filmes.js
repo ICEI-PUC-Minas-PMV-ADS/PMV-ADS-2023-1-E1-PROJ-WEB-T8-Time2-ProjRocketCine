@@ -15,19 +15,18 @@ const options = {
     }
 };
 
-
+//Carrousel
 function carrousel(home){
-   
     if(home == 1){
         document.getElementById('testando').innerHTML = `
                     <div class="slideshow-container">
                         <div class="mySlides fade">
                             <img src="https://i.pinimg.com/originals/ed/95/68/ed9568bd70d70d69fabdd0f07c39e840.jpg" style="width: 100%">
-                            <div class="text">The white shadow</div>
+                            <div class="caption text">The white shadow</div>
                         </div>
                         <div class="mySlides fade">
                             <img src="https://vignette.wikia.nocookie.net/x-men/images/f/f1/Wnxwall_1280.jpg/revision/latest?cb=20081227203256" style="width: 100%">
-                            <div class="caption text">Wolverine and the x-men</div>
+                            <div class="caption text">Wolverine and the X-men</div>
                         </div>
                         <div class="mySlides fade">
                             <img src="https://image.chilimovie.com/public/1280px/20200507/Abxd55CoyX4yKat0nekwmIpQOso.jpg" style="width: 100%">
@@ -40,17 +39,12 @@ function carrousel(home){
                         <span class="dot"></span>
                         <span class="dot"></span>
                     </div>
-                ` 
-                      
-        }else{document.getElementById('testando').innerHTML = ''}
-        
+                `      
+        }else{document.getElementById('testando').innerHTML = ''}    
 }
-
-
 
 // Coleta os dados de cada filme ou série com base na lista de ids list_id
 async function print_midia(url_movies, home='') {
-
     try {
         const response = await fetch(url_movies, options);
         const result = await response.json();
@@ -68,26 +62,20 @@ async function print_midia(url_movies, home='') {
 
         const id_e_tipo_filme = `${id}-${tipo}`
 
-       
         const responses = await fetch(img)
-        if (responses.status != 404) {
 
+        if (responses.status != 404) {
 
             console.log('testando')
 
-
             document.getElementById('estilo').innerHTML +=`
-            
             #conteudo #${id_e_tipo_filme} img:hover{
                 border: 2px solid #232428;
                 filter: opacity(80%);
-                
               }        
-            
             `
 
             document.getElementById('conteudo').innerHTML += `
-
             <ul id="${id_e_tipo_filme}" onclick="detalhes_filme(this.id)">
                 <div class="classificacao">
                     <h1>${classificacao}</h1>
@@ -95,16 +83,11 @@ async function print_midia(url_movies, home='') {
                 <li><img src='${img}'><p>${titulo}</p></li>
             </ul>    
             `
-
-
-
         }
-
     } catch (error) {
         console.error(error);
     }
 }
-
 
 async function pagina_filmes(url){
     try {
@@ -129,12 +112,13 @@ async function pagina_filmes(url){
         const id_e_tipo_filme = `${id}-${tipo}`
 
         const responses = await fetch(img)
-        if (responses.status != 404) {
 
+        if (responses.status != 404) {
 
             document.getElementById('conteudo').innerHTML += `
             <div id='teste'></div>
             `
+
             function genero_f(){
                 for(i = 1; i<= genero.length; i++){ 
                     document.getElementById('genero').innerHTML += `
@@ -143,14 +127,11 @@ async function pagina_filmes(url){
                 }
             }
 
-
             document.getElementById('teste').innerHTML += `
-
             <ul id="${id_e_tipo_filme}" onclick="detalhes_filme(this.id)" class="filme">
                 <li><img src='${img}'><p id="titulo">${titulo}</p></li>
             </ul>
             `
-
 
             document.getElementById('teste').innerHTML += `
                 <h2>Sinopse:</h2>
@@ -176,10 +157,10 @@ async function pagina_filmes(url){
                 </div>
 
                 <iframe width="340" height="200" src="${trailer}" frameborder="0">
-                </<iframe>
-                
+                </<iframe> 
             `
-            //comentários
+
+            //comentário
             document.getElementById('cmt').innerHTML = `
             <div class="comentario">
                 <div id="corpo">
@@ -216,7 +197,6 @@ async function pagina_filmes(url){
                     </div>
                 </section>
             </div>
-
             `
 
             genero_f()
@@ -226,8 +206,6 @@ async function pagina_filmes(url){
         console.error(error);
     }
 }
-
-
 
 // Filtra os ids para realizar coleta dos dados de cada filme ou série
 async function id_movies(url, list_id, home='') {
@@ -252,7 +230,6 @@ async function id_movies(url, list_id, home='') {
     }
 }
 
-
 // Filtra os ids para realizar coleta dos dados de cada filme ou série
 async function id_series(url, list_id, home='') {
     try {
@@ -263,7 +240,6 @@ async function id_series(url, list_id, home='') {
 
             const id = results.imdb_id
             list_id.push(id)
-
         })
 
         // Varre a lista a lista de ids e busca o filme ou série
@@ -271,15 +247,12 @@ async function id_series(url, list_id, home='') {
         for (var i = 1; i <= list_id.length; i++) {
 
             print_midia(`https://moviesminidatabase.p.rapidapi.com/series/id/${list_id[i - 1]}/`, home)
-
         }
 
     } catch (error) {
         console.error(error);
     }
 }
-
-
 function limpar() {
     conteudo.innerHTML = ''
     cmt.innerHTML = ''
@@ -300,10 +273,7 @@ function detalhes_filme(id){
         carrousel(0)
         pagina_filmes(`https://moviesminidatabase.p.rapidapi.com/movie/id/${id_e_tipo_filme[0]}/`)
     }
-    
 }
-
-
 
 const conteudo = document.getElementById('conteudo')
 
@@ -315,14 +285,12 @@ function printar_conteudos(funcao, url, lista, home='') {
     }
 }
 
-
 id_series(url_popularity_serie, list_id_series)
 id_movies(url_popularity_movie, lista_de_id_filmes)
 carrousel(1)
 
 
-//Carrousel
-
+//Carrousel-JS
 var slideIndex = 0;
 showSlides()
 
@@ -330,11 +298,13 @@ function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("dot");
+
     for (i = 0; i < slides.length; i++) {
        slides[i].style.display = "none";  
     }
     slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
+
+    if (slideIndex > slides.length) {slideIndex = 1}
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
@@ -343,12 +313,12 @@ function showSlides() {
     setTimeout(showSlides, 5000);  
 }
 
-//comentários js
-
+//Comentado-JS
 var stars = document.querySelectorAll('.star-icon');
 
 document.addEventListener('click', function(e){
   var classStar = e.target.classList;
+
   if(!classStar.contains('ativo')){
     stars.forEach(function(star){
       star.classList.remove('ativo');
@@ -357,7 +327,6 @@ document.addEventListener('click', function(e){
     console.log(e.target.getAttribute('data-stars'));
   }
 });
-
 
 var cont = 0
 function nComentario(){
@@ -377,7 +346,6 @@ function nComentario(){
                             <img src="src/imagens/man.png">
                         </div>
                         
-
                         <div class="estrelas">
                             <p>${localStorage.getItem('nome')}</p>
                             <ul class="stars">
