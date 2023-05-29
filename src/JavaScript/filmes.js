@@ -7,7 +7,6 @@ const url_popularity_movie = 'https://moviesminidatabase.p.rapidapi.com/movie/or
 // Links para a solicitação de series
 const url_popularity_serie = 'https://moviesminidatabase.p.rapidapi.com/series/order/byPopularity/';
 
-
 const options = {
     method: 'GET',
     headers: {
@@ -40,7 +39,7 @@ function carrousel(home){
                         <span class="dot"></span>
                         <span class="dot"></span>
                         <span class="dot"></span>
-                </div>
+                    </div>
                 ` 
                       
         }else{document.getElementById('testando').innerHTML = ''}
@@ -80,8 +79,9 @@ async function print_midia(url_movies, home='') {
             document.getElementById('estilo').innerHTML +=`
             
             #conteudo #${id_e_tipo_filme} img:hover{
-                border: 8px solid white;
-                box-shadow: 1px 1px 5px #F48225, -1px -1px 5px #F48225;
+                border: 2px solid #232428;
+                filter: opacity(80%);
+                
               }        
             
             `
@@ -189,12 +189,6 @@ async function pagina_filmes(url){
                             <img src="src/imagens/man.png">
                         </div>
             
-                        <div class="usuario-com"> <!-- automatizar para aparecer o nome do usuário -->
-                            <p>User(Teste)
-            
-                            </p>
-                        </div>
-            
                         <div class="estrelas">
                             <ul class="stars">
                                 <li class="star-icon ativo" data-stars="1"></li>
@@ -214,7 +208,7 @@ async function pagina_filmes(url){
                     </div>
         
                     <div class="input-com">
-                        <textarea id="novoComentario" maxlength="300" placeholder="Novo Comentário..."></textarea>
+                        <textarea id="novoComentario" maxlength="550" placeholder="Novo Comentário..."></textarea>
                         
                         <div class="btn-com">
                             <button onclick="nComentario()">Comentar</button>
@@ -222,11 +216,9 @@ async function pagina_filmes(url){
                     </div>
                 </section>
             </div>
-        
-            <ul id="comentarios" class="comentario-2">
-            
-            </ul>
+
             `
+
             genero_f()
         }
 
@@ -291,6 +283,7 @@ async function id_series(url, list_id, home='') {
 function limpar() {
     conteudo.innerHTML = ''
     cmt.innerHTML = ''
+    comentado.innerHTML = ''
 }
 
 // Validando Filme ou série do elemento clicado
@@ -365,21 +358,43 @@ document.addEventListener('click', function(e){
   }
 });
 
+
+var cont = 0
 function nComentario(){
-  let li = document.createElement("li");
-  let valoringressado = document.getElementById("novoComentario").value;
-  let texto = document.createTextNode(valoringressado);
-  var meucomentario = document.getElementById("meucomentario");
+    cont++
+  let comentario = document.getElementById('novoComentario')
+  if (comentario.value == ''){
+    alert('Digite um comentario')
+  }else{
+  localStorage.setItem(`comentario${cont}`, comentario.value)
 
-  li.appendChild(texto);
+  document.getElementById('comentado').innerHTML += `
+            <div class="comentario">
+                <div id="corpo">
+                    <section id="geral" class="usuario-avaliacao">
+        
+                        <div class="imagem-usuario">
+                            <img src="src/imagens/man.png">
+                        </div>
+                        
 
-  if(valoringressado === ''){
-      alert("Insira um comentário!");
-  } else{
-      document.getElementById("comentarios").appendChild(li);
-      localStorage.setItem("comentario", valoringressado);
-      meucomentario.appendChild(texto);
-}
-  meucomentario.removeChild(texto);
-  li.className = "comentarios";
+                        <div class="estrelas">
+                            <p>${localStorage.getItem('nome')}</p>
+                            <ul class="stars">
+                                <li class="star-icon ativo" data-stars="1"></li>
+                                <li class="star-icon" data-stars="2"></li>
+                                <li class="star-icon" data-stars="3"></li>
+                                <li class="star-icon" data-stars="4"></li>
+                                <li class="star-icon" data-stars="5"></li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+        
+                <section class="conteudo-com">
+                    <textarea maxlength="550" placeholder="0" disabled>${localStorage.getItem(`comentario${cont}`)}</textarea>
+                </section>
+            </div>
+            `
+  }
 }

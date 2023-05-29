@@ -249,7 +249,7 @@ header input {
     width: 76%;
     align-self: flex-end;
     margin-top: 2%;
-    margin-right: 2%;
+    margin-right: 3%;
     text-align: center;
     padding-top: 2%;
     border-top: 2px solid white;
@@ -269,12 +269,14 @@ header input {
     color: black;
     text-align: left;
     list-style: none;
+    
   }
 
   #conteudo img{
     width: 100%;
     border-radius: 8px;
-    border: 4px solid white;
+    box-shadow: -20px 0px 20px #00000086;
+
   }
 
   #conteudo p{
@@ -424,25 +426,10 @@ header input {
     font-family: sans-serif;
 }
 
-
-/* carrocel */
-.carousel {
-    width: 50%;
-    margin-left: 25%;
-    margin-top: -1%;
-    margin-bottom: 5%;
-    border-radius: 32px;
-}
-
-.carousel img{
-    width: 80%;
-    height: 450px;
-    border-radius: 32px;
-}
 /* Barra lateral com menu de opçoes de genero */
 
 #nav_gradient {
-    border-radius: 32px;
+    border-radius: 32px 32px 0 0;
     background-color: white;
     padding-left: 0.1%;
     padding-right: 0.1%;
@@ -456,7 +443,7 @@ header input {
 }
 
 nav {
-    border-radius: 32px;
+    border-radius: 32px 32px 0 0;
     background-color: #151518;
     width: 98.5%;
     height: 100vh;
@@ -495,7 +482,6 @@ nav ul a:focus {
     border-right: 2px solid #F4A645;
     color: #F4A645;
 }
-
 
 nav ul a:link,
 nav ul a:visited {
@@ -536,7 +522,6 @@ nav hr {
     justify-content: center;
     align-items: center;
 }
-
 
 /* Animação para abrir o modal */
 @keyframes modal {
@@ -684,19 +669,19 @@ nav hr {
     box-shadow: 20px 0px 20px #161719;
 }
 
-
 /* Carrousel */
 
 .slideshow-container {
-    max-width: 90%;
+    max-width: 99.9%;
+    margin-left: 0.05%;
     border-radius: 20px;
-    margin: auto;
+    margin-top: -2.6%;
     position: relative;
   }
 
   .slideshow-container img{
     height: 700px;
-    border-radius: 20px;
+    border-radius: 32px 32px 20px 20px;
   }
   
   .mySlides { display: none;}
@@ -712,10 +697,9 @@ nav hr {
     padding: 8px 12px;
     background-color: rgba(0,0,0,0.6);
     border-radius: 0 0 14px 14px;
+    margin-bottom: 4%;
   }
 
-  
-  
   .dot {
     display: inline-block;
     border: 2px solid white;
@@ -740,127 +724,190 @@ nav hr {
     to { opacity: 1}
   }
   
-/* Comentários */
-  .comentario{
-    background-color: rgba(150, 150, 150, 0.7);
+/* Comentando */
+#cmt .comentario{
     position: relative;
         top: 0;
         left:0;
-    width: 600px;
-    height: 250px;
+    width: 60%;
     border-radius: 10px;
+    margin-left: 20%;
+    margin-top: 10%;
 }
 
-.usuario-avaliacao{
-    position: absolute;
-        top: 0;
-        left:0;
+#cmt .usuario-avaliacao{
     height: 70px;
     width: 600px;
     border-radius: 10px;
-    background-color: rgba(32, 32, 32, 0.7);
 
 }
 
-.imagem-usuario{
+#cmt .imagem-usuario{
+    float: left;
+    margin-top: 6%;
+    margin-left: 4%;
+    width: 8%;
+    
+}
+
+#cmt .imagem-usuario img{
+    width: 100%;
+}
+
+#cmt .usuario-com {
     position: absolute;
-        left: 10px;
-        top: 10px;
+    left: 70px;
+    top: 12px;
 }
 
-img{
-    width: 50px;
-}
-
-.usuario-com {
-    position: absolute;
-        left: 70px;
-        top: 12px;
-}
-
-.stars{
+#cmt .stars{
     display: flex;
-    position: absolute;
-        left: 440px;
-        top: 0;
-   }
-  .star-icon{
+    width: 18%;
+    margin-left: 14%;
+    padding-top: 7%;
+}
+#cmt .star-icon{
     list-style-type: none;
     border: transparent;
     cursor: pointer;
     color: #ffe500;
-    font-size: 28px;/* alterar o tamanho das estrelas */
+    font-size: 1.5rem;/* tamanho das estrelas */
   }
-  .star-icon::before{
+  #cmt .star-icon::before{
     content: "\2605";
   }
-  .star-icon.ativo ~ .star-icon::before{
+  #cmt .star-icon.ativo ~ .star-icon::before{
     content: "\2606";
   }
-  .avaliacao:hover .star-icon::before{
+  #cmt .avaliacao:hover .star-icon::before{
     content: "\2605";
   }
-  .star-icon:hover ~ .star-icon::before{
+  #cmt .star-icon:hover ~ .star-icon::before{
     content: "\2606";
   }
 
-.conteudo-com{
-    position: absolute;
-        top: 80px;
-        left: 3px;
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
+  #cmt .conteudo-com{
+    margin-top: 2%;
 }
 
-.imput-com{
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    background: none;
-    gap: 5px;
-}
-
-#novoComentario{
-    position: static;
+#cmt #novoComentario{
     outline: none;
-    width: 563px;
-    height: 110px;
-    padding: 10px 10px 10px 10px;
-    font-size: 15px;
-    background-color: rgba(32, 32, 32, 0.7);
-    color: black;
-    border-bottom: 5px solid rgba(255,255,255,0);
+    resize: none;
+    width: 100%;
+    height: 150px;
+    padding: 2%;
+    font-size: 1rem;
+    background-color: #34353a;
+    color: white;
+    border: none;
     border-radius: 10px;
-    transition-duration: 200ms;
+    margin-top: 1%;
 }
 
-#novoComentario::placeholder{
-    color: rgb(37, 37, 37);
+#cmt #novoComentario::placeholder{
+    color: white;
 }
 
-#novoComentario:focus{
-    border-bottom: px solid black;
-}
-
-.btn-com{
-    height: 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding:  0px 5px 5px 0px;
-}
-
-.comentario-2{
-    display: flex;
-    position: absolute;
-        top: 265px;
-    background-color: rgba(150, 150, 150, 0.7);
-    width: 560px;
-    height: auto;
+#cmt .btn-com button{
+    float: right;
+    margin-right: 5%;
+    margin-top: 1%;
+    background: none;
+    border: 2px solid rgb(196, 196, 196);
+    color: rgb(196, 196, 196);
+    padding:  6px;
     border-radius: 10px;
-    flex-direction: column;
-    gap: 10px;
+    cursor: pointer;
+}
+
+#cmt .btn-com button:hover{
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+
+/* Comentários */
+#comentado .comentario{
+    position: relative;
+        top: 0;
+        left:0;
+    width: 60%;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+#novoComentario .usuario-avaliacao{
+    height: 70px;
+    width: 600px;
+    border-radius: 10px;
+
+}
+
+#comentado .imagem-usuario{
+    float: left;
+    margin-top: 1%;
+    margin-left: 4%;
+    width: 4%;
+}
+
+#comentado .imagem-usuario img{
+    width: 100%;
+}
+
+#comentado .stars{
+    display: flex;
+    width: 18%;
+    margin-left: 9%;
+    padding: 0;
+}
+
+#comentado p{
+    color: white;
+    width: 20%;
+    text-align: left;
+    margin-left: 9%;
+    padding-top: 1%;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+}
+
+#comentado .star-icon{
+    list-style-type: none;
+    border: transparent;
+    cursor: pointer;
+    color: #ffe500;
+    margin-top: -4%;
+    font-size: 1.2rem;/* alterar o tamanho das estrelas */
+  }
+  #comentado .star-icon::before{
+    content: "\2605";
+  }
+  #comentado .star-icon.ativo ~ .star-icon::before{
+    content: "\2606";
+  }
+  #comentado .avaliacao:hover .star-icon::before{
+    content: "\2605";
+  }
+  #comentado .star-icon:hover ~ .star-icon::before{
+    content: "\2606";
+  }
+
+  #comentado .conteudo-com{
+    margin-top: 2%;
+
+}
+
+#comentado textarea{
+    border-radius: 10px;
+    width: 100%;
+    background-color: #646464;
+    border: none;
+    resize: none;
+    overflow: auto;
+    margin-top: -1%;
+    padding: 1%;
+    margin-left: 4%;
+    color: white;
 }
 
 /* Rodapé */
