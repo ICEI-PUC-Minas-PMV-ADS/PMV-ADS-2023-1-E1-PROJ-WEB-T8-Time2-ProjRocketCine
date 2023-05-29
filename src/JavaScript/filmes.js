@@ -183,11 +183,7 @@ async function pagina_filmes(url){
                 </div>
         
                 <section class="conteudo-com">
-        
-                    <div class="meucomentario">
-        
-                    </div>
-        
+
                     <div class="input-com">
                         <textarea id="novoComentario" maxlength="550" placeholder="Novo Comentário..."></textarea>
                         
@@ -198,6 +194,20 @@ async function pagina_filmes(url){
                 </section>
             </div>
             `
+            //Estrelas-JS
+            var stars = document.querySelectorAll('.star-icon');
+
+            document.addEventListener('click', function(e){
+                var classStar = e.target.classList;
+
+                if(!classStar.contains('ativo')){
+                stars.forEach(function(star){
+                star.classList.remove('ativo');
+                });
+                classStar.add('ativo');
+                console.log(e.target.getAttribute('data-stars'));
+                }
+            });
 
             genero_f()
         }
@@ -289,7 +299,6 @@ id_series(url_popularity_serie, list_id_series)
 id_movies(url_popularity_movie, lista_de_id_filmes)
 carrousel(1)
 
-
 //Carrousel-JS
 var slideIndex = 0;
 showSlides()
@@ -314,20 +323,6 @@ function showSlides() {
 }
 
 //Comentado-JS
-var stars = document.querySelectorAll('.star-icon');
-
-document.addEventListener('click', function(e){
-  var classStar = e.target.classList;
-
-  if(!classStar.contains('ativo')){
-    stars.forEach(function(star){
-      star.classList.remove('ativo');
-    });
-    classStar.add('ativo');
-    console.log(e.target.getAttribute('data-stars'));
-  }
-});
-
 var cont = 0
 function nComentario(){
     cont++
