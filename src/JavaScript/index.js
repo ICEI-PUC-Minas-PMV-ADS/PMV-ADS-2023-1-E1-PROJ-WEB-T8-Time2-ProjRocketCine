@@ -1,4 +1,3 @@
-
 // Remover o modal ao clicar em algum botão
 function removerModal(modalID) {
     const modal = document.getElementById(modalID)
@@ -28,6 +27,15 @@ entrar.addEventListener('click', function () {
 
 cadastrar.addEventListener('click', function () {
     iniciarModal('modal_cadastro')
+})
+
+// Botão de Primeiro Acesso
+const primeiro = document.getElementById('primeiro')
+
+primeiro.addEventListener('click', function () {
+    removerModal('modal_login')    
+    iniciarModal('modal_cadastro')
+    modal_login.remove();
 })
 
 // Coletando e validando os dados de cadastro

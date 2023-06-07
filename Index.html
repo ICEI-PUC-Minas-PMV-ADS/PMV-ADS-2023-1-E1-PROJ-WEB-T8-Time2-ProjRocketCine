@@ -23,11 +23,17 @@
 
         <ul>
             <li class="home" id="home"><a href="#" onclick="limpar(), printar_conteudos(id_movies, url_popularity_movie, lista_de_id_filmes), printar_conteudos(id_series, url_popularity_serie, list_id_series), carrousel(1), showSlides()">Home</a></li>
-            <li class="home" id="filmes"><a href="#" onclick="limpar(), printar_conteudos(id_movies, url_popularity_movie, lista_de_id_filmes), carrousel(0)">Filmes</a></li>
-            <li class="home" id="series"><a href="#" onclick="limpar(), printar_conteudos(id_series, url_popularity_serie, list_id_series), carrousel(0)">Séries</a></li>
+            <li class="home" id="filmes"><a href="#" onclick="limpar(), validacao_generos(this.id), printar_conteudos(id_movies, url_popularity_movie, lista_de_id_filmes), carrousel(0)">Filmes</a></li>
+            <li class="home" id="series"><a href="#" onclick="limpar(), validacao_generos(this.id), printar_conteudos(id_series, url_popularity_serie, list_id_series), carrousel(0)">Séries</a></li>
         </ul>
 
-        <input type="text" placeholder="Pesquisar">
+        <datails id="resultado_pesquisa">
+            <summary>
+                <input id="pesquisa" type="search" placeholder="Pesquisar">
+            </summary>
+            <ul id="listados" class="listado logar">    
+            </ul>
+        </datails>        
 
         <details class="perfil logar" id="perfilID">
             <summary>
@@ -40,9 +46,6 @@
                 <h2 class="quem_entrou"></h2>
                 <hr>
                 </hr>
-                <li><a href="#">Configurações</a></li>
-                <li><a href="#">Favoritos</a></li>
-                <li><a href="#">Minhas avaliações</a></li>
                 <li><a href="Index.html">Sair <img src="src/imagens/logout.png" alt=""></a></li>
             </ul>
         </details>
@@ -82,15 +85,15 @@
             <img src="src/imagens/Logo.png" alt="" id="logo" onclick="limpar(), printar_conteudos(id_movies, url_popularity_movie, lista_de_id_filmes), printar_conteudos(id_series, url_popularity_serie, list_id_series), carrousel(1), showSlides()" style="cursor: pointer;">
             <h1>Generos</h1>
             <ul>
-                <li><a id="acao" href="#">Ação</a></li>
-                <li><a id="aventura" href="#">Aventura</a></li>
-                <li><a id="comedia" href="#">Comédia</a></li>
-                <li><a id="documentario" href="#">Documentário</a></li>
-                <li><a id="drama" href="#">Drama</a></li>
-                <li><a id="ficcao_cientifica" href="#">Ficção científica</a></li>
-                <li><a id="romance" href="#">Romance</a></li>
-                <li><a id="suspense" href="#">Suspense</a></li>
-                <li><a id="terror" href="#">Terror</a></li>
+                <li><a id="Action" href="#" onclick="limpar(), printar_generos(this.id), carrousel(0)">Ação</a></li>
+                <li><a id="Adventure" href="#" onclick="limpar(), printar_generos(this.id), carrousel(0)">Aventura</a></li>
+                <li><a id="Comedy" href="#" onclick="limpar(), printar_generos(this.id), carrousel(0)">Comédia</a></li>
+                <li><a id="Documentary" href="#" onclick="limpar(), printar_generos(this.id), carrousel(0)">Documentário</a></li>
+                <li><a id="Drama" href="#" onclick="limpar(), printar_generos(this.id), carrousel(0)">Drama</a></li>
+                <li><a id="Sci-Fi" href="#" onclick="limpar(), printar_generos(this.id), carrousel(0)">Ficção científica</a></li>
+                <li><a id="Romance" href="#" onclick="limpar(), printar_generos(this.id), carrousel(0)">Romance</a></li>
+                <li><a id="Thriller" href="#" onclick="limpar(), printar_generos(this.id), carrousel(0)">Suspense</a></li>
+                <li><a id="Horror" href="#" onclick="limpar(), printar_generos(this.id), carrousel(0)">Terror</a></li>
             </ul>
             <hr>
             </hr>
@@ -122,7 +125,7 @@
                     <input id="email_login" maxlength="50" type="email" class="e-mail" placeholder="E-mail">
                     <input id="senha_login" maxlength="20" type="password" class="senha" placeholder="Senha">
                 </form>
-                <h4><a href="#modal_cadastro">Primeiro acesso?</a></h4>
+                <h4><a id="primeiro" href="#modal_login">Primeiro acesso?</a></h4>
                 <div id="logar" class="botao"><a href="#modal_login">Entrar</a></div>
                 <div class="gradiente_lateral"></div>
             </div> 

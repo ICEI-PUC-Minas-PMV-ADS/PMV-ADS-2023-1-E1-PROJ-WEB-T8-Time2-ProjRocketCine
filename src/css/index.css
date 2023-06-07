@@ -59,7 +59,7 @@ header #entrar {
 /* Criando menu e imagem de perfil */
 header .perfil {
     width: 5%;
-    margin-top: 0.7%;
+    margin-top: -2.8%;
     margin-right: 2%;
     float: right;
     cursor: pointer;
@@ -214,9 +214,58 @@ header input:focus {
     outline: 0;
 }
 
-header input {
+#resultado_pesquisa #listados { 
+    margin-top: 0.3%;
+    margin-left: 23%;
+    background-color:#34353a;
+    color: white;
+    width: 55%;
+    font-family: sans-serif;
+    max-height: 500px;
+    padding: 0;
+    overflow: auto;
+    border-radius: 5px;
+}
+
+.tt {
+    display: grid;
+}
+
+#resultado_pesquisa #listados::-webkit-scrollbar {
+    display: none;
+}
+
+#resultado_pesquisa #listados li{
+    padding: 10px;
+    cursor: pointer;
+}
+
+#resultado_pesquisa #listados li a{
+    margin: 28px;
+}
+
+
+#resultado_pesquisa #listados li:link,
+
+#resultado_pesquisa #listados li:visited {
+    display: inline-block;
+    padding: 4% 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#resultado_pesquisa #listados li:hover {
+    color: white;
+    background-color: #2567AA;
+}
+
+
+
+
+
+#resultado_pesquisa summary input {
     margin-top: 1.2%;
-    margin-left: 1%;
+    margin-left: 1.0%;
     color: white;
     border-radius: 10px;
     border-top: none;
@@ -224,7 +273,7 @@ header input {
     border-left: none;
     border-bottom: 2px solid white;
     width: 55%;
-    height: 45%;
+    height: 35px;
     padding-left: 3%;
     box-shadow: inset 0px 0px 20px -5px rgba(0, 0, 0, 0.25);
     background-color: rgba(37, 38, 43, 0.1);
@@ -297,7 +346,7 @@ header input {
 }
 
 #conteudo #teste{
-    width: 100;
+    width: 100%;
     height: auto;
     margin-top: -2.8%;
     border-top: 2px solid white;
@@ -708,7 +757,7 @@ nav hr {
     width: 60%;
     border-radius: 10px;
     margin-left: 20%;
-    margin-top: 10%;
+    margin-top: 1%;
 }
 
 #cmt .usuario-avaliacao{
@@ -720,7 +769,7 @@ nav hr {
 #cmt .imagem-usuario{
     float: left;
     margin-top: 6%;
-    margin-left: 4%;
+    margin-left: 1%;
     width: 8%;  
 }
 
@@ -754,7 +803,7 @@ nav hr {
 
 #cmt .btn-com button{
     float: right;
-    margin-right: 5%;
+    margin-right: 3%;
     margin-top: 1%;
     background: none;
     border: 2px solid rgb(196, 196, 196);
@@ -770,48 +819,48 @@ nav hr {
 }
 
 /*Estrelas-comentário*/
-#cmt .stars{
-    display: flex;
-    width: 18%;
-    margin-left: 14%;
-    padding-top: 7%;
-}
+#cmt .rating{
+    display: inline-block;
+    margin-left: -65%;
+    padding-top: 6%;
+    }
+    
+    #cmt .rating input {
+        display: none;
+        cursor: pointer;
+    }
+      
+    #cmt .rating label {
+        float: right;
+        cursor: pointer;
+        font-size: 30px;
+        color: lightgray;
+    }
+      
+    #cmt .rating label:before {
+        content: '\2605';
+    }
+      
+    #cmt .rating input:checked ~ label {
+        color: gold;
+    }
 
-#cmt .star-icon{
-    list-style-type: none;
-    border: transparent;
-    cursor: pointer;
-    color: #ffe500;
-    font-size: 1.5rem;/* tamanho das estrelas */
-  }
-  #cmt .star-icon::before{
-    content: "\2605";
-  }
-  #cmt .star-icon.ativo ~ .star-icon::before{
-    content: "\2606";
-  }
-  #cmt .avaliacao:hover .star-icon::before{
-    content: "\2605";
-  }
-  #cmt .star-icon:hover ~ .star-icon::before{
-    content: "\2606";
-  }
-  #cmt .conteudo-com{
-    margin-top: 2%;
+    #cmt .conteudo-com{
+        margin-top: 2%;
 }
 
 /* Comentado */
 #comentado .comentario{
     position: relative;
         top: 0;
-        left:0;
+        left: 0;
     width: 60%;
     border-radius: 10px;
-    margin-left: 20%;
-    margin-top: 10%;
+    margin-left: 17.5%;
+    margin-top: 5%;
 }
 
-#novoComentario .usuario-avaliacao{
+#comentado .usuario-avaliacao{
     height: 70px;
     width: 600px;
     border-radius: 10px;
@@ -820,29 +869,22 @@ nav hr {
 #comentado .imagem-usuario{
     float: left;
     margin-top: 1%;
-    margin-left: 4%;
-    width: 4%;
+    margin-left: 5%;
+    width: 5%;
 }
 
 #comentado .imagem-usuario img{
     width: 100%;
 }
 
-#comentado .stars{
-    display: flex;
-    width: 18%;
-    margin-left: 9%;
-    padding: 0;
-}
-
 #comentado p{
     color: white;
     width: 20%;
     text-align: left;
-    margin-left: 9%;
-    padding-top: 1%;
+    margin-left: 11%;
+    padding-top: 0.5%;
     font-family: sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 #comentado textarea{
@@ -852,35 +894,35 @@ nav hr {
     border: none;
     resize: none;
     overflow: auto;
-    margin-top: -1%;
+    margin-top: 1%;
     padding: 1%;
     margin-left: 4%;
     color: white;
 }
 
+#comentado .conteudo-com{
+    margin-top: -5%;
+}
+
 /*Estrelas-comentado*/
-#comentado .star-icon{
-    list-style-type: none;
-    border: transparent;
-    cursor: pointer;
-    color: #ffe500;
-    margin-top: -4%;
-    font-size: 1.2rem;/* tamanho das estrelas */
-  }
-  #comentado .star-icon::before{
-    content: "\2605";
-  }
-  #comentado .star-icon.ativo ~ .star-icon::before{
-    content: "\2606";
-  }
-  #comentado .avaliacao:hover .star-icon::before{
-    content: "\2605";
-  }
-  #comentado .star-icon:hover ~ .star-icon::before{
-    content: "\2606";
-  }
-  #comentado .conteudo-com{
-    margin-top: 2%;
+#comentado .rating{
+    display: inline-block;
+    position: relative;
+        top: -10px;
+        left: -224px;
+}
+
+#comentado .rating input {
+    display: none;
+}
+  
+#comentado .rating label {
+    font-size: 20px;
+}
+  
+#comentado .rating label:before {
+    content: '\2605';
+    color: gold;
 }
 
 /* Rodapé */
