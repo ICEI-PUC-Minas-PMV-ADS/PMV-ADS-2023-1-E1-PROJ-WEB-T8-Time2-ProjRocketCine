@@ -22,9 +22,9 @@
         </div>
 
         <ul>
-            <li class="home" id="home"><a href="#" onclick="limpar(), printar_conteudos(id_movies, url_popularity_movie, lista_de_id_filmes), printar_conteudos(id_series, url_popularity_serie, list_id_series), carrousel(1), showSlides()">Home</a></li>
-            <li class="home" id="filmes"><a href="#" onclick="limpar(), validacao_generos(this.id), printar_conteudos(id_movies, url_popularity_movie, lista_de_id_filmes), carrousel(0)">Filmes</a></li>
-            <li class="home" id="series"><a href="#" onclick="limpar(), validacao_generos(this.id), printar_conteudos(id_series, url_popularity_serie, list_id_series), carrousel(0)">Séries</a></li>
+            <li class="home" id="home"><a id="homeA" href="#" onclick="limpar(), validacao_generos('home'), printar_conteudos(id_movies, url_popularity_movie, lista_de_id_filmes), printar_conteudos(id_series, url_popularity_serie, list_id_series), carrousel(1), showSlides()">Home</a></li>
+            <li class="home" id="filmes" ><a id="filmesA" href="#" onclick="limpar(), validacao_generos('filmes'), printar_conteudos(id_movies, url_popularity_movie, lista_de_id_filmes), carrousel(0)">Filmes</a></li>
+            <li class="home" id="series"><a id="seriesA" href="#" onclick="limpar(), validacao_generos('series'), printar_conteudos(id_series, url_popularity_serie, list_id_series), carrousel(0)">Séries</a></li>
         </ul>
 
         <datails id="resultado_pesquisa">
@@ -111,7 +111,7 @@
                     placeholder="Senha(mínimo 4 caracteres)">
                 <input id="senha2" maxlength="20" type="password" class="cSenha" placeholder="confirme a senha">
             </form>
-            <h4><a href="">Cancelar</a></h4>
+            <h4><a id="cancelar" href="#">Cancelar</a></h4>
             <div id="criar" class="botao"><a href="#modal_cadastro">Criar</a></div>
             <div class="gradiente_lateral"></div>
         </div>

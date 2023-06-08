@@ -20,6 +20,14 @@ function iniciarModal(modalID) {
 // Pegando os elementos e chamando o modal ao clicar no botão de entrar ou cadastrar na barra superior
 const cadastrar = document.getElementById('cadastrar')
 const entrar = document.getElementById('entrar')
+const cancelar = document.getElementById('cancelar')
+const modal_cadastro = document.getElementById('modal_cadastro')
+const modal_login = document.getElementById('modal_login')
+
+
+cancelar.addEventListener('click', () => {
+    modal_cadastro.classList.remove('mostrar')
+})
 
 entrar.addEventListener('click', function () {
     iniciarModal('modal_login')
@@ -32,10 +40,9 @@ cadastrar.addEventListener('click', function () {
 // Botão de Primeiro Acesso
 const primeiro = document.getElementById('primeiro')
 
-primeiro.addEventListener('click', function () {
-    removerModal('modal_login')    
+primeiro.addEventListener('click', function () { 
+    modal_login.classList.remove('mostrar') 
     iniciarModal('modal_cadastro')
-    modal_login.remove();
 })
 
 // Coletando e validando os dados de cadastro

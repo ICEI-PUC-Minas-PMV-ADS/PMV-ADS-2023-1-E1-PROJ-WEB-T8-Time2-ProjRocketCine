@@ -104,7 +104,7 @@ header .menu {
     padding: 0;
     margin-top: 4.4%;
     position: absolute;
-    background-color: #151518;
+    background-color: #34353a;
     border-radius: 10px;
     border: .1px solid #646464;
 }
@@ -116,7 +116,7 @@ header .menu::before {
     margin-left: 58%;
     border-style: solid;
     border-width: 0 10px 10px 10px;
-    border-color: transparent transparent #2d2d2e transparent;
+    border-color: transparent transparent #34353a transparent;
 }
 
 header .menu a {
@@ -151,13 +151,15 @@ header .menu li a:link,
 
 header .menu li a:visited {
     display: inline-block;
-    padding: 4% 1rem;
+    padding: 4%;
     width: 100%;
     box-sizing: border-box;
 }
 
 header .menu li a:hover {
     color: white;
+    border-radius: 0 0 10px 10px;
+    margin-left: -2.5px;
     background-color: #2567AA;
 }
 
@@ -206,6 +208,11 @@ header ul .home a:hover {
     color: #F4A645;
 }
 
+.click{
+    border-bottom: 2px solid #F4A645;
+    color: #F4A645;
+}
+
 header input::placeholder {
     color: rgb(201, 200, 200);
 }
@@ -217,12 +224,13 @@ header input:focus {
 #resultado_pesquisa #listados { 
     margin-top: 0.3%;
     margin-left: 23%;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background-color:#34353a;
     color: white;
     width: 55%;
     font-family: sans-serif;
     max-height: 500px;
-    padding: 0;
     overflow: auto;
     border-radius: 5px;
 }
@@ -238,6 +246,11 @@ header input:focus {
 #resultado_pesquisa #listados li{
     padding: 10px;
     cursor: pointer;
+    background-image: url("../imagens/lupa.png");
+    background-repeat:no-repeat;
+    background-size: 15px;
+    background-position: 10px;
+
 }
 
 #resultado_pesquisa #listados li a{
@@ -249,7 +262,7 @@ header input:focus {
 
 #resultado_pesquisa #listados li:visited {
     display: inline-block;
-    padding: 4% 1rem;
+    padding: 4%;
     width: 100%;
     box-sizing: border-box;
 }
@@ -424,6 +437,8 @@ header input:focus {
     margin-left: 19.5%;
     margin-top: 7%;
     cursor:default;
+    cursor: default;
+    pointer-events: none;
 }
 
 #conteudo #teste #genero li {
@@ -448,6 +463,8 @@ header input:focus {
     margin-left: 15%;
     width: 8%;
     text-align: center;
+    cursor: default;
+    pointer-events: none;
 }
 
 #conteudo #teste .informacoes p{
@@ -697,16 +714,17 @@ nav hr {
 
 /* Carrousel */
 .slideshow-container {
-    max-width: 99.9%;
-    margin-left: 0.05%;
+    max-width: 85%;
+    margin-left: 7.5%;
     border-radius: 20px;
-    margin-top: -2.6%;
+    margin-top: -1%;
+    box-shadow: 0px 0px 30px #101113;
     position: relative;
   }
 
   .slideshow-container img{
-    height: 700px;
-    border-radius: 32px 32px 20px 20px;
+    height: 600px;
+    border-radius: 20px;
   }
   
   .mySlides { display: none;}
@@ -868,9 +886,9 @@ nav hr {
 
 #comentado .imagem-usuario{
     float: left;
-    margin-top: 1%;
-    margin-left: 5%;
-    width: 5%;
+    margin-top: 2%;
+    margin-left: 6%;
+    width: 5.5%;
 }
 
 #comentado .imagem-usuario img{
@@ -881,7 +899,7 @@ nav hr {
     color: white;
     width: 20%;
     text-align: left;
-    margin-left: 11%;
+    margin-left: 75px;
     padding-top: 0.5%;
     font-family: sans-serif;
     font-size: 1.3rem;
@@ -906,10 +924,9 @@ nav hr {
 
 /*Estrelas-comentado*/
 #comentado .rating{
-    display: inline-block;
-    position: relative;
-        top: -10px;
-        left: -224px;
+    top: 10px;
+    margin-left: 6px;
+    float: left;
 }
 
 #comentado .rating input {

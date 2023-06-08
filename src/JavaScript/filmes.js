@@ -49,6 +49,7 @@ function carrousel(home){
 }
 
 
+
 // Coleta os dados de cada filme ou série com base na lista de ids list_id
 async function print_midia(url_movies, home='') {
     try {
@@ -103,11 +104,18 @@ var listados = document.getElementById('listados')
 barraPesquisa.addEventListener('input', () => {
     if (barraPesquisa.value != '') {
         listados.classList.add('tt')
+        listados.innerHTML = ''
     } else {
         listados.classList.remove('tt')
         listados.innerHTML = ''
     }
 })
+
+function limpar_pesquisa(){
+    listados.classList.remove('tt')
+    barraPesquisa.value = ''
+    listados.innerHTML = ''
+}
 
 const pesquisando_filmes = async (pesquisa) => {
     try {
@@ -140,16 +148,18 @@ const pesquisando_filmes = async (pesquisa) => {
 
 const saida = async (response, response2) => {
 
+    document.addEventListener('click', () => { limpar_pesquisa() })
+
     if (response.length > 0 || response2.length > 0) {
         const valor = response.map((result) => {
             document.getElementById('listados').innerHTML += `
-            <li id="${result.imdb_id}" onclick="detalhes_filme(this.id)" ><a>${result.title}</a></li>
+            <li id="${result.imdb_id}" onclick="detalhes_filme(this.id, limpar_pesquisa()" ><a>${result.title}</a></li>
             `
         });
 
         const valor2 = response2.map((result) => {
             document.getElementById('listados').innerHTML += `
-            <li id="${result.imdb_id}" onclick="detalhes_filme(this.id)" ><a>${result.title}</a></li>
+            <li id="${result.imdb_id}" onclick="detalhes_filme(this.id), limpar_pesquisa()" ><a>${result.title}</a></li>
             `
         });
     }
@@ -163,7 +173,9 @@ barraPesquisa.addEventListener('input', () => {
 
 // Página específica de cada filme
 var starValue = 0
+var n_comentario = []
 async function pagina_filmes(url){
+    
     try {
         const response = await fetch(url, options);
         const result = await response.json();
@@ -178,6 +190,7 @@ async function pagina_filmes(url){
         var ano = result.results.year
         const tipo = result.results.type
         const genero = result.results.gen
+
 
         if(ano == undefined){
             ano = result.results.start_year
@@ -265,7 +278,7 @@ async function pagina_filmes(url){
                         <textarea id="novoComentario" maxlength="550" placeholder="Novo Comentário..."></textarea>
                         
                         <div class="btn-com">
-                            <button onclick="nComentario()">Comentar</button>
+                            <button id='${id}' onclick="nComentario(this.id)">Comentar</button>
                         </div>
                     </div>
                 </section>
@@ -280,25 +293,25 @@ async function pagina_filmes(url){
                 });
             });
 
-            var comentarios = []
-            for (var i = 1; i <= 5; i++) {
-                for (var c = 1; c <= 5; c++) {
-                    var key = localStorage.key(`comentario${i}-tt6760876-${c}`)
-                    console.log(key, id)
-                    var value = localStorage.getItem(`comentario${i}-${id}-${c}`)
-                    if (value != null) {
-                        comentarios.push([value, c])
-                    }
+
+            let key = []
+            let comentarios = []
+            for (var i = 0; i < localStorage.length; i++){
+                let chave = localStorage.key(i)
+                let chave_sp = chave.split('-')
+                if(chave_sp[1] == id){
+                    key.push(id)
+                    comentarios.push([chave_sp])
+                    n_comentario.push(id)
                 }
             }
-    
-            key_Sp = key.split('-')
+
             var cont = 0
            
-            if (id == key_Sp[1]) {
+            if (id == key[0]) {
                 comentarios.forEach((comentarios_p) => {
                     cont++
-
+                    console.log(comentarios_p)
                     document.getElementById('comentado').innerHTML += `
                         <div class="comentario">
                             <div id="corpo">
@@ -314,13 +327,13 @@ async function pagina_filmes(url){
                             </div>
                     
                             <section class="conteudo-com">
-                                <textarea maxlength="550" placeholder="0" disabled>${comentarios_p[0]}</textarea>
+                                <textarea maxlength="550" placeholder="0" disabled>${localStorage.getItem(comentarios_p[0].join('-'))}</textarea>
                             </section>
                         </div>
                         `
 
                     // Impressão das estrelas no comentado
-                    for (i = 1; i <= comentarios_p[1]; i++) {
+                    for (i = 1; i <= comentarios_p[0][2]; i++) {
                         document.getElementById(`section_dos_comentarios${cont}`).innerHTML += `
                             <div class="rating">
                                 <input type="radio" id="star${i}" name="rating" value="${i}">
@@ -393,15 +406,16 @@ async function id_series(url, list_id, home='') {
 
 
 // Função de limpar o conteúdo
-function limpar() {
+function limpar(response) {
     conteudo.innerHTML = ''
     cmt.innerHTML = ''
-    comentado.innerHTML = ''  
+    comentado.innerHTML = '' 
+
 }
 
 
 // Validando Filme ou série do elemento clicado
-async function detalhes_filme(id) {
+async function detalhes_filme(id){
     limpar()
     id_e_tipo_filme = id.split('-')
 
@@ -427,31 +441,52 @@ carrousel(1)
 
 
 //Validação para os Gêneros
-var onclickFilmes = false
-var onclickSeries = false
-function validacao_generos(id, home='') {
-    if (id == 'filmes') {
-        onclickFilmes = true;
-    } else if (id == 'series') {
-        onclickSeries = true;
+
+function validacao_generos(id) {
+    localStorage.setItem('tipo', id)
+    filmes = document.getElementById('filmesA')
+    series = document.getElementById('seriesA')
+    home = document.getElementById('homeA')
+
+    if(id == 'filmes'){
+
+        home.classList.remove('click')
+        series.classList.remove('click')
+        filmes.classList.add('click')
+
+    } else if(id == 'series'){
+
+        home.classList.remove('click')
+        filmes.classList.remove('click')
+        series.classList.add('click')
+
+    } else if(id == 'home'){
+
+        filmes.classList.remove('click')
+        series.classList.remove('click')
+        home.classList.add('click')
     }
 }
 
 
 // Função para requisitar os filmes e séries de acordo com o gênero
-function printar_generos(genero, home='') {
-    if (onclickFilmes == true) {
-        list_id_generos = []
+function printar_generos(genero) {
+    tipo = localStorage.getItem('tipo')
+    if (tipo == 'filmes') {
 
+        list_id_generos = []
         id_movies(`https://moviesminidatabase.p.rapidapi.com/movie/byGen/${genero}/`, list_id_generos)
 
-    } else if (onclickSeries == true) {
+    } else if (tipo == 'series') {
+
         list_id_generos = []
-
         id_series(`https://moviesminidatabase.p.rapidapi.com/series/byGen/${genero}/`, list_id_generos)
-    } else{
-        alert('Determine se deseja filtrar entre filme ou série antes!')
 
+    } else if (tipo == 'home') {
+
+        list_id_generos = []
+        id_movies(`https://moviesminidatabase.p.rapidapi.com/movie/byGen/${genero}/`, list_id_generos)
+        id_series(`https://moviesminidatabase.p.rapidapi.com/series/byGen/${genero}/`, list_id_generos)
     }
 }
 
@@ -481,23 +516,26 @@ function showSlides() {
 
 
 //Comentado-JS
-var cont = 0
+var cont = 1
+
 function nComentario(id_filme) {
+    
     cont++
     let comentario = document.getElementById('novoComentario')
     let usuario = document.getElementById('nome')
     let login = document.getElementById('email_login')
     if (comentario.value == '') {
         alert('Digite um comentario')
-    } else if (login.value == '') {
-        alert('Faça o Login!')
-    } else {
-        localStorage.setItem(`comentario${cont}-${id_filme}-${starValue}`, comentario.value, usuario.value)
+    }else {
+
+        localStorage.setItem(`comentario${n_comentario.length + cont}-${id_filme}-${starValue}`, comentario.value, usuario.value)
+
+        novoComentario.value = ''
 
         document.getElementById('comentado').innerHTML += `
             <div class="comentario">
                 <div id="corpo">
-                    <section id="section_dos_comentarios${cont}" class="usuario-avaliacao">
+                    <section id="section_dos_comentarios${n_comentario.length + cont}" class="usuario-avaliacao">
         
                         <div class="imagem-usuario">
                             <img src="src/imagens/man.png">
@@ -509,14 +547,14 @@ function nComentario(id_filme) {
                 </div>
         
                 <section class="conteudo-com">
-                    <textarea maxlength="550" placeholder="0" disabled>${localStorage.getItem(`comentario${cont}-${id_filme}`)}</textarea>
+                    <textarea maxlength="550" placeholder="0" disabled>${localStorage.getItem(`comentario${n_comentario.length + cont}-${id_filme}-${starValue}`)}</textarea>
                 </section>
             </div>
     `
 
         // Impressão das estrelas no comentado
-        for (i = 1; i <= starValue; i++) {
-            document.getElementById(`section_dos_comentarios${cont}`).innerHTML += `
+        for (var i = 1; i <= starValue; i++) {
+            document.getElementById(`section_dos_comentarios${n_comentario.length + cont}`).innerHTML += `
         <div class="rating">
             <input type="radio" id="star${i}" name="rating" value="${i}">
             <label for="star${i}"></label>
