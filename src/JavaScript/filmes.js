@@ -524,9 +524,14 @@ function nComentario(id_filme) {
     let comentario = document.getElementById('novoComentario')
     let usuario = document.getElementById('nome')
     let login = document.getElementById('email_login')
+
     if (comentario.value == '') {
         alert('Digite um comentario')
-    }else {
+    
+    } else if (login.value == '') {
+        alert('Realize o Log-in!')
+    
+    } else {
 
         localStorage.setItem(`comentario${n_comentario.length + cont}-${id_filme}-${starValue}`, comentario.value, usuario.value)
 

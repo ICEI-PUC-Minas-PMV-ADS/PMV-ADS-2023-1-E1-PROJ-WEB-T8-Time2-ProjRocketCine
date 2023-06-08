@@ -56,7 +56,17 @@ function coletandoValidandoDadosCadastro() {
 
     criar.addEventListener('click', function () {
 
-        if (senha1.value != senha2.value) {
+        if (nome.value == '') {
+            alert ('Nome de usuário inválido')
+            nome.classList.add('erro')
+        }
+
+        else if (email.value == '') {
+            alert ('E-mail inválido')
+            email.classList.add('erro')
+        }
+
+        else if (senha1.value != senha2.value) {
             alert('As senhas não são iguais')
             senha1.classList.add('erro')
             senha2.classList.add('erro')
