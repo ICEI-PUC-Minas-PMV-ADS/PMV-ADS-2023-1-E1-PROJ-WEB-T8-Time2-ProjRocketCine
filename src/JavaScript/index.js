@@ -107,7 +107,7 @@ function coletandoValidandoDadosLogin() {
     const logar = document.getElementById('logar')
 
 
-    logar.addEventListener('click', function () {
+
 
         if (email.value == localStorage.getItem('email') && senha.value == localStorage.getItem('senha1')) {
 
@@ -130,9 +130,8 @@ function coletandoValidandoDadosLogin() {
             email.classList.add('erro')
             senha.classList.add('erro')
         }
-    })
+
 }
 
 
 coletandoValidandoDadosCadastro()
-coletandoValidandoDadosLogin()

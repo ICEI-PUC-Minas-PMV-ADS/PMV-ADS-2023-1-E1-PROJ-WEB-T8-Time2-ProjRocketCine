@@ -153,7 +153,7 @@ const saida = async (response, response2) => {
     if (response.length > 0 || response2.length > 0) {
         const valor = response.map((result) => {
             document.getElementById('listados').innerHTML += `
-            <li id="${result.imdb_id}" onclick="detalhes_filme(this.id, limpar_pesquisa()" ><a>${result.title}</a></li>
+            <li id="${result.imdb_id}" onclick="detalhes_filme(this.id), limpar_pesquisa()" ><a>${result.title}</a></li>
             `
         });
 
@@ -275,7 +275,7 @@ async function pagina_filmes(url){
                 <section class="conteudo-com">
 
                     <div class="input-com">
-                        <textarea id="novoComentario" maxlength="550" placeholder="Novo Comentário..."></textarea>
+                        <textarea id="novoComentario" maxlength="300" placeholder="Novo Comentário..."></textarea>
                         
                         <div class="btn-com">
                             <button id='${id}' onclick="nComentario(this.id)">Comentar</button>
@@ -327,10 +327,11 @@ async function pagina_filmes(url){
                             </div>
                     
                             <section class="conteudo-com">
-                                <textarea maxlength="550" placeholder="0" disabled>${localStorage.getItem(comentarios_p[0].join('-'))}</textarea>
+                                <textarea maxlength="300" placeholder="0" disabled>${localStorage.getItem(comentarios_p[0].join('-'))}</textarea>
                             </section>
                         </div>
                         `
+                        
 
                     // Impressão das estrelas no comentado
                     for (i = 1; i <= comentarios_p[0][2]; i++) {
@@ -552,7 +553,7 @@ function nComentario(id_filme) {
                 </div>
         
                 <section class="conteudo-com">
-                    <textarea maxlength="550" placeholder="0" disabled>${localStorage.getItem(`comentario${n_comentario.length + cont}-${id_filme}-${starValue}`)}</textarea>
+                    <textarea maxlength="300" placeholder="0" disabled>${localStorage.getItem(`comentario${n_comentario.length + cont}-${id_filme}-${starValue}`)}</textarea>
                 </section>
             </div>
     `

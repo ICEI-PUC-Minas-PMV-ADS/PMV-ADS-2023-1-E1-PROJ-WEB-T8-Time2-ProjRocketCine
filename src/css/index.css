@@ -908,9 +908,11 @@ nav hr {
 #comentado textarea{
     border-radius: 10px;
     width: 100%;
+    height: 100px;
     background-color: #646464;
     border: none;
     resize: none;
+    overflow-y: hidden;
     margin-top: 1%;
     padding: 1%;
     margin-left: 4%;
