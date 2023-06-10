@@ -31,8 +31,6 @@ Oliveira (2017) esclarece que:
 
 As primeiras iniciativas na área de crítica cinematográfica remontam a algumas nações da Europa e aos Estados Unidos dos anos 1900. Inspirados em publicações sobre o mundo do teatro, jornalistas e entusiastas da invenção dos Lumière avaliavam as produções fílmicas recentes em textos bastante próximos às atuais sinopses. À medida que as indústrias cinematográficas ao redor do mundo cresceram, diversificou-se também o papel dos críticos – muitos, por exemplo, ganharam proeminência para debater questões estéticas, profissionais e políticas do mundo do cinema. (OLIVEIRA, 2017, p.1). 
 
- 
-
 Com a ascensão da internet e o surgimento de novas tecnologias, surgiram também outras formas de entretenimento visual, como as séries de televisão, documentários e outros. Além da criação de aplicativos e plataformas de streaming, que ajudam na distribuição do conteúdo e permitem, não só aos críticos como também aos usuários comuns, maior liberdade para expressar suas opiniões sobre as obras. 
 
 Sendo assim, para que o cenário das críticas possa acompanhar as tendências do setor de entretenimento visual, a utilização de sites de avaliação torna-se fundamental para o apoio da disseminação de informações que auxiliam os espectadores. 
@@ -41,4 +39,5 @@ Sendo assim, para que o cenário das críticas possa acompanhar as tendências d
 ## Público-Alvo
 
 O público-alvo do "Rocket Cine" são pessoas com idades entre 17 e 60 anos, que têm interesse em filmes e séries e utilizam plataformas de streaming. Essas pessoas muitas vezes se deparam com a pergunta "o que devo assistir?" e acabam em um ciclo de indecisão ao entrar nas páginas de diferentes conteúdos, sem saber se serão bons ou agregarão algo em suas vidas.
+
 Para resolver esse dilema, o "Rocket Cine" foi criado como uma solução, fornecendo avaliações e comentários de outros usuários, ajudando esse público a tomar decisões informadas sobre o que assistir em suas plataformas de streaming preferidas.
