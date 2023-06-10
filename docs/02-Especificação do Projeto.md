@@ -5,7 +5,9 @@ A definição exata do problema e os pontos mais relevantes a serem tratados nes
 Os detalhes levantados nesse processo foram consolidados na forma de personas e histórias de usuários. 
 
 ## Personas
+
 As personas levantadas durante o processo de entendimento do problema são apresentadas a seguir: 
+
 
 **Luciana Alencar** 
 
@@ -32,7 +34,7 @@ Cristóvão é um homem de 32 anos e trabalha como gestor de tráfego há cerca 
 
 Seus hobbies incluem esportes ao ar livre, navegar no Facebook, LinkedIn, Instagram, e ficar tranquilo em casa assistindo filmes e séries. 
 
-Cristóvão se baseia no número de avaliações sobre aquela produção cinematográfica para decidir se irá assistir. 
+Cristóvão gosta de separar suas obras entre filmes e séries para facilitar seu processo de decisão sobre o que assistir.
 
 ## Histórias de Usuários
 
@@ -40,13 +42,12 @@ Com base na compreensão do dia-a-dia das funções identificadas para o projeto
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Luciana Alencar     | Ter acesso a maiores quantidades de análises (Filmes e séries)         | Saber se o que vou assistir poderá me agradar                |
-|Fábio Cardoso       | Sistema de avaliação por estrelas                  | Tornar minha tomada de decisão mais prática  |
-|Fábio Cardoso       | Ler as avaliações tanto no desktop quanto no celular                  | Praticidade de acesso |
-|Junior Lucarios     | Visualizar os filmes mais relevantes do momento                 | Saber das tendências  |
-|Junior Lucarios     | Filtrar quanto ao gênero do filme                  | Ver filmes de uma categoria específica. |
-|Cristóvão Goulart   | Poder ter acesso a quantidade de pessoas que avaliam os filmes/ séries                 | Para decidir se verá a obra  |
-
+|Luciana Alencar     | Ter acesso a maiores quantidades de análises (Filmes e séries) | Saber se o que vou assistir poderá me agradar                |
+|Fábio Cardoso       | Sistema de avaliação por estrelas  | Tornar minha tomada de decisão mais prática  |
+|Fábio Cardoso       | Ler as avaliações tanto no desktop quanto no celular  | Praticidade de acesso |
+|Junior Lucarios     | Visualizar os filmes mais relevantes do momento   | Saber das tendências  |
+|Junior Lucarios     | Filtrar quanto ao gênero do filme  | Ver filmes de uma categoria específica. |
+|Cristóvão Goulart   | Poder filtrar entre filmes e séries | Para decidir se verá a obra  |
 
 
 ## Requisitos
@@ -62,13 +63,14 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |------|-----------------------------------------|----|
 |RF-01| O site deve conter um sistema de avaliação por estrelas | ALTA | 
 |RF-02| O site deve conter um campo para comentário dos usuários   | ALTA  |
-|RF-03| O site deve conter um mecanismo de busca e filtragem por gêneros    | ALTA |
-|RF-04| O site deve conter um sistema de login   | ALTA |
-|RF-05| O site deve exibir informações sobre o filme ou série, como enredo, elenco, sinopse e data de lançamento  | ALTA |
-|RF-06| O site deve exibir imagem da capa do filme   | MÉDIA |
-|RF-07| O site deve permitir salvar filmes ou séries preferidas    | BAIXA |
+|RF-03| O site deve conter um mecanismo de filtragem por filmes, séries e gêneros   | MÉDIA |
+|RF-04| O site deve conter um sistema de cadastro e login   | MÉDIA |
+|RF-05| O site deve exibir informações sobre o filme ou série, como duração, ano de estreia, tipo, sinopse, gênero e trailer  | MÉDIA |
+|RF-06| O site deve exibir um catálogo geral de filmes e séries, apresentando o título, nota e a imagem da capa de cada filme   | ALTA |
+|RF-07| O site deve apresentar um carrossel com filmes mais relevantes do momento    | BAIXA |
 |RF-08| O site deve exibir os comentários registrados juntamente com o filme ou série exibida  | ALTA |
-|RF-09| O site deve permitir visualizar os conteúdos favoritos   | BAIXA |
+|RF-09| O site deve conter um botão home  | BAIXA |
+|RF-10| O site de conter uma barra de pesquisa | BAIXA |
 
 
 ### Requisitos não Funcionais
@@ -78,8 +80,7 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |RNF-01| O site deverá ser responsivo permitindo a visualização em um celular de forma adequada  | ALTA | 
 |RNF-02| O site deve ter bom nível de contraste entre os elementos da tela em conformidade | ALTA | 
 |RNF-03| O site deve ser compatível com navegadores como Google Chrome, Firefox, Microsoft Edge e outros |  ALTA |
-|RNF-04| O site deve ser estilizado com duas cores principais: roxo(#80349c), cinza(#25262b)  |  BAIXA |
-
+|RNF-04| O site deve ser estilizado com duas cores principais: azul(#2567AA), cinza(#232428)  |  BAIXA |
 
 
 ## Restrições
