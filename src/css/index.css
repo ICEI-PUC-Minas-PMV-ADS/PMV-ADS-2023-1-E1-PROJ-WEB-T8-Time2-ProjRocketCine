@@ -786,8 +786,8 @@ nav hr {
 
 #cmt .imagem-usuario{
     float: left;
-    margin-top: 6%;
-    margin-left: 1%;
+    margin-top: 15%;
+    margin-left: -14%;
     width: 8%;  
 }
 
@@ -838,9 +838,8 @@ nav hr {
 
 /*Estrelas-comentário*/
 #cmt .rating{
-    display: inline-block;
-    margin-left: -65%;
-    padding-top: 6%;
+    float: left;
+    padding-top: 10%;
     }
     
     #cmt .rating input {
@@ -879,15 +878,16 @@ nav hr {
 }
 
 #comentado .usuario-avaliacao{
-    height: 70px;
+    padding-top: 50px;
     width: 600px;
+    margin-left: 40px;
     border-radius: 10px;
 }
 
 #comentado .imagem-usuario{
     float: left;
-    margin-top: 2%;
-    margin-left: 6%;
+    margin-top: 5%;
+    margin-left: -10%;
     width: 5.5%;
 }
 
@@ -897,10 +897,9 @@ nav hr {
 
 #comentado p{
     color: white;
-    width: 20%;
-    text-align: left;
-    margin-left: 75px;
-    padding-top: 0.5%;
+    padding-right: 10px;
+    margin-bottom: -10px;
+    float: left;
     font-family: sans-serif;
     font-size: 1.3rem;
 }
@@ -926,7 +925,6 @@ nav hr {
 /*Estrelas-comentado*/
 #comentado .rating{
     top: 10px;
-    margin-left: 6px;
     float: left;
 }
 
@@ -941,6 +939,25 @@ nav hr {
 #comentado .rating label:before {
     content: '\2605';
     color: gold;
+}
+
+
+#comentado .rating1{
+    top: 10px;
+    float: left;
+}
+
+#comentado .rating1 input {
+    display: none;
+}
+  
+#comentado .rating1 label {
+    font-size: 20px;
+}
+  
+#comentado .rating1 label:before {
+    content: '\2605';
+    color: lightgray;
 }
 
 /* Rodapé */

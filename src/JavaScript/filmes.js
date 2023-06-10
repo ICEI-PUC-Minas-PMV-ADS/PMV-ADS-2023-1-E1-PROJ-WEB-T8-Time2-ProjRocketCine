@@ -333,7 +333,7 @@ async function pagina_filmes(url){
                         `
                         
 
-                    // Impressão das estrelas no comentado
+                    //Impressão das estrelas no comentado
                     for (i = 1; i <= comentarios_p[0][2]; i++) {
                         document.getElementById(`section_dos_comentarios${cont}`).innerHTML += `
                             <div class="rating">
@@ -341,6 +341,15 @@ async function pagina_filmes(url){
                                 <label for="star${i}"></label>
                             </div>
                     `}
+
+                    for (i = 1; i <= 5 - parseInt(comentarios_p[0][2]); i++) {
+                        document.getElementById(`section_dos_comentarios${cont}`).innerHTML += `
+                            <div class="rating1">
+                                <input type="radio" id="star${i}" name="rating" value="${i}">
+                                <label for="star${i}"></label>
+                            </div>
+                    `}
+                    
                 })
             }
 
@@ -566,5 +575,14 @@ function nComentario(id_filme) {
             <label for="star${i}"></label>
         </div>
         `}
+
+        for (var i = 1; i <= 5 - starValue; i++) {
+            document.getElementById(`section_dos_comentarios${n_comentario.length + cont}`).innerHTML += `
+        <div class="rating1">
+            <input type="radio" id="star${i}" name="rating" value="${i}">
+            <label for="star${i}"></label>
+        </div>
+        `}
+
     }
 }
