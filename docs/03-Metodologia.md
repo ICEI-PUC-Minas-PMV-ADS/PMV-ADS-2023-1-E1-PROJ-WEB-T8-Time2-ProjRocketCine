@@ -4,6 +4,7 @@
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
 Nesta seção estão apresentadas a Relação de Ambiente de Trabalho, a Gestão do Código Fonte e o Gerenciamento do Projeto em questão. Na Relação de Ambiente de Trabalho, estão apresentadas as plataformas e os respectivos endereços dos arquivos utilizados ao longo do projeto. Já na Gestão do Código Fonte, seguimos a metodologia GitFlow, que nos permite controlar as alterações no código e realizar testes antes de serem integradas na branch principal. E por fim, no Gerenciamento do Projeto, utilizamos a metodologia Scrum, com sprints semanais e uma equipe de desenvolvimento e design responsáveis pela implementação e entrega das funcionalidades.
+
 Utilizamos também o GitHub Project para organizar as tarefas da equipe, fazendo o uso de labels e milestones para priorizar e categorizar as issues. Tudo isso garante uma gestão eficiente e organizada para o desenvolvimento do projeto.
 
 ## Relação de Ambientes de Trabalho
@@ -48,9 +49,9 @@ Para o desenvolvimento de funcionalidades específicas, serão criadas branches 
 
 ### Divisão de Papéis
 
-- Scrum Master: Leonardo Gabriel de Mattos Campos
+- Scrum Master: Pedro Ferreira Andrade
 - Product Owner: Bruno Henrique Arantes Dias
-- Equipe de Desenvolvimento: Bruno Henrique Arantes Dias, Leonardo Gabriel de Mattos Campos, Pedro Ferreira Andrade, Wesley Correa Gomes
+- Equipe de Desenvolvimento: Bruno Henrique Arantes Dias, Pedro Ferreira Andrade, Wesley Correa Gomes
 - Equipe de Design: Wesley Correa Gomes
 
 ### Processo
