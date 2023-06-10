@@ -254,7 +254,7 @@ async function pagina_filmes(url){
                     <section id="geral" class="usuario-avaliacao">
         
                         <div class="imagem-usuario">
-                            <img src="src/imagens/man.png">
+                            <img src="docs/img/man.png">
                         </div>
             
                         <div class="rating">
@@ -318,7 +318,7 @@ async function pagina_filmes(url){
                                 <section id="section_dos_comentarios${cont}" class="usuario-avaliacao">
                     
                                     <div class="imagem-usuario">
-                                        <img src="src/imagens/man.png">
+                                        <img src="docs/img/man.png">
                                     </div>
                                     
                                     <p>${localStorage.getItem('nome')}</p>
@@ -553,7 +553,7 @@ function nComentario(id_filme) {
                     <section id="section_dos_comentarios${n_comentario.length + cont}" class="usuario-avaliacao">
         
                         <div class="imagem-usuario">
-                            <img src="src/imagens/man.png">
+                            <img src="docs/img/man.png">
                         </div>
                         
                         <p>${localStorage.getItem('nome')}</p>

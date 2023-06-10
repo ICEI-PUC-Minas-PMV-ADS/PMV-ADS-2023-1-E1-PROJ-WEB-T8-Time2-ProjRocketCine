@@ -246,7 +246,7 @@ header input:focus {
 #resultado_pesquisa #listados li{
     padding: 10px;
     cursor: pointer;
-    background-image: url("../imagens/lupa.png");
+    background-image: url("docs/img/lupa.png");
     background-repeat:no-repeat;
     background-size: 15px;
     background-position: 10px;
@@ -290,7 +290,7 @@ header input:focus {
     padding-left: 3%;
     box-shadow: inset 0px 0px 20px -5px rgba(0, 0, 0, 0.25);
     background-color: rgba(37, 38, 43, 0.1);
-    background-image: url("../imagens/lupa.png");
+    background-image: url("docs/img/lupa.png");
     background-repeat: no-repeat;
     background-size: 2.5%;
     background-position-x: 1.5%;
