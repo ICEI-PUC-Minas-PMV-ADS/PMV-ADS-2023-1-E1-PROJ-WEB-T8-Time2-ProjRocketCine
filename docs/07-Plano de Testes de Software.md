@@ -77,7 +77,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Requisitos Associados | RF-02 - O site deve conter um campo para comentário dos usuários |
 | Objetivo do Teste | Comentar avaliação e críticas sobre o filme ou série |
 | Passos | 1 - Executar o arquivo “Index.html” <br> 2 - Efetuar login na plataforma <br> 3 - Clicar no filme desejado <br> 4 - Preencher o campo 'Novo comentário' <br> 5 - Clicar no botão 'comentar'|
-| Critérios de Êxito | * O campo deverá permitir a entrada de texto do usuário <br> * O campo deverá permitir no máximo 300 caracteres <br> * O site deve exibir um alerta caso o campo de comentário esteja vazio na hora de comentar <br> * O campo deverá limpar ao enviar o comentário <br> * Exibir o comentário publicado abaixo |
+| Critérios de Êxito | * O campo deverá permitir a entrada de texto do usuário <br> * O campo deverá permitir no máximo 300 caracteres <br> * O site deve exibir um alerta caso o campo de comentário esteja vazio na hora de comentar <br> * O site deve exibir um alerta caso o campo de comentário esteja preenchido, mas o usuário não esteja logado <br> * O campo deverá limpar ao enviar o comentário <br> * Exibir o comentário publicado abaixo |
 
 <br>
 
