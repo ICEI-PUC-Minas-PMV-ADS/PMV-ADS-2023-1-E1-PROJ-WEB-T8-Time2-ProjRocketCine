@@ -15,6 +15,8 @@
 - Cada item do catálogo deve exibir sua respectiva capa, título e nota de avaliação - *Critério Atendido*
 - O catálogo deve está ordenado de maneira correta - *Critério Atendido*
 - Exibir animação de destaque ao passar o mouse - *Critério Atendido*
+
+<img src="./img/">
 <br>
 
 ## CT-02 - Funcionamento do Carrossel
@@ -28,6 +30,8 @@
 
 - O carrossel deve ser exibido no topo do conteúdo - *Critério Atendido*
 - Mostrar os filmes mais populares automaticamente - *Critério Atendido*
+ 
+ <img src="./img/">
  <br>
  
 ## CT-03 - Funcionamento da barra de pesquisa
@@ -43,6 +47,8 @@
 
 - Apresentar o filme ou série pesquisado - *Critério Atendido*
 - Acessar a página do filme ao clicar na opção desejada - *Critério Atendido*
+
+<img src="./img/">
 <br>
 
 ## CT-04 - Funcionamento da tela de cadastro
@@ -61,6 +67,8 @@
 - Deverá exibir um alerta caso a senha digitada não tenha no mínimo 4 caracteres - *Critério Atendido*
 - O usuário não poderá cadastrar caso os campos 'senha' e 'confirmar senha' não estejam coerentes - *Critério Atendido*
 - Exibir alerta ao efetuar o cadastro com êxito - *Critério Atendido*
+
+<img src="./img/">
 <br>
 
 ## CT-05 - Funcionamento da tela de login
@@ -77,6 +85,8 @@
 - Botão ‘Entrar’ deverá exibir a página de login de usuário - *Critério Atendido*
 - Os campos de formulário deverão apresentar um alerta caso estejam vazios, contendo divergência nos dados ou com informações não cadastradas no sistema - *Critério Atendido*
 - Exibir alerta ao efetuar o login com êxito - *Critério Atendido*
+
+<img src="./img/">
 <br>
 
 ## CT-06 - Exibição de informações específicas de cada obra
@@ -90,6 +100,8 @@
 
 - Deverá exibir as informações de duração, ano de estreia, tipo, sinopse, gênero e trailer do filme escolhido - *Critério Atendido*
 - Informações deverão estar bem apresentadas - *Critério Atendido*
+
+<img src="./img/">
 <br>
 
 ## CT-07 - Avaliar os filmes dando a nota por estrelas
@@ -105,6 +117,8 @@
 
 - O usuário deverá conseguir escolher a quantidade de estrelas desejada - *Critério Atendido*
 - As estrelas deverão ser exibidas no comentário feito - *Critério Atendido*
+
+<img src="./img/">
 <br>
 
 ## CT-08 - Funcionamento do comentário ao digitar e enviar
@@ -124,6 +138,8 @@
 - O site deve exibir um alerta caso o campo de comentário esteja vazio na hora de comentar - *Critério Atendido*
 - O campo deverá limpar ao enviar o comentário - *Critério Atendido*
 - Exibir o comentário publicado abaixo - *Critério Atendido*
+
+<img src="./img/">
 <br>
 
 ## CT-09 - Funcionamento da filtragem por tipo
@@ -138,6 +154,8 @@
 - Deverá ficar destacado quando selecionado a opção desejada - *Critério Atendido*
 - Não poderá selecionar as duas opções ao mesmo tempo, tirando o destaque de uma ao selecionar a outra - *Critério Atendido*
 - Deverá exibir somente o conteúdo da opção desejada - *Critério Atendido*
+
+<img src="./img/">
 <br>
 
 ## CT-10 - Funcionamento da filtragem por gênero
@@ -152,6 +170,8 @@
 - Deverá ficar destacado quando selecionado a opção desejada - *Critério Atendido*
 - Não poderá selecionar mais de uma opção ao mesmo tempo, tirando o destaque de uma ao selecionar a outra - *Critério Atendido*
 - Deverá exibir somente o conteúdo da opção desejada - *Critério Atendido*
+
+<img src="./img/">
 <br>
 
 ## CT-11 - Responsividade
@@ -167,3 +187,5 @@
 
 **Observações (CT-11):** 
 - Os elementos do site ainda não correspondem corretamente de acordo com a variação da proporção da aba do site.
+
+<img src="./img/">
