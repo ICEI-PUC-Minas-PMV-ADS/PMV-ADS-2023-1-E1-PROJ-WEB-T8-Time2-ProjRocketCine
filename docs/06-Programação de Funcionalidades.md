@@ -4,9 +4,10 @@
 
 Nesta seção serão apresentadas as telas desenvolvidas para cada uma das funcionalidades do sistema, especificadas durante os Requisitos Funcionais.
 
-## Cabeçalho e Barra Lateral (RF-03, RF-09)
+## Cabeçalho e Barra Lateral (RF-03, RF-09, RF-10)
 
 Para uma melhor organização dos elementos que estariam presentes em todas as páginas do projeto, criamos um cabeçalho e uma barra lateral onde estarão alocadas algumas das funcionalidades do site. No cabeçalho, estão presentes o botão “Home”, os botões de filtragem entre filmes e séries, a barra de pesquisa e os sistemas de login e cadastro. Já na barra lateral, foi inserida a lista de filtragem por gênero.
+
 Para uma melhor visualização, ambas as estruturas estão apresentadas na página estrutural do site que está a seguir:
 
 <img src="./img/cabecalho-barra-lateral.png">
@@ -17,6 +18,7 @@ Para uma melhor visualização, ambas as estruturas estão apresentadas na pági
 ### Requisitos Atendidos
 * RF- 03 - mecanismo de pesquisa e filtragem
 * RF-09 - botão home
+* RF-10 - barra de pesquisa
 
 ### Artefatos da Funcionalidade
 * Index.html
@@ -47,13 +49,13 @@ O campo de cadastro permite que o usuário crie uma conta inserindo informaçõe
 
 O carrossel de filmes e séries em destaque exibe banners dos principais filmes do momento a paratir de um sistema de rolagem automática.
 
-<img src="./img/carrousel.png">
+<img src="./img/carrousel.png" height=500 width=900>
 
 ### Responsável pela Funcionalidade
 * Pedro Ferreira Andrade
 
 ### Requisitos Atendidos
-* RF-10 - Carrossel de Filmes em Destaque
+* RF-07 - Carrossel de Filmes em Destaque
 
 ### Artefatos da Funcionalidade
 * Index.html
@@ -75,7 +77,6 @@ O catálogo de filmes tem como o objetivo auxiliar usuários a uma melhor intera
 ### Artefatos da Funcionalidade
 * Index.html
 * Index.css
-* Index.js
 * Filmes.js
 
 ## Especificações do Filme (RF-05)
@@ -93,5 +94,22 @@ Espaço destinado a apresentar as informações técnicas sobre cada filme indiv
 ### Artefatos da Funcionalidade
 * Index.html
 * Index.css
-* Index.js
+* Filmes.js
+
+## Sistema de comentários (RF-01, RF-02)
+
+Espaço destinado a apresentar os comentários e avaliações dos usuários sobre o filme em questão.
+
+<img src="./img/Comentarios.png">
+
+### Responsável pela Funcionalidade
+* Wesley Correa Gomes
+
+### Requisitos Atendidos 
+* RF-01 - Avaliação por Estrelas
+* RF-02 - Comentários/Avaliações
+
+### Artefatos da Funcionalidade
+* Index.html
+* Index.css
 * Filmes.js
