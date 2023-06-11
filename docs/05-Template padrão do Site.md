@@ -28,4 +28,4 @@ Essa tela exibe os filmes ou séries filtrados por categoria e gênero.
 
 Página que fornece as especificações individuais do filme ao qual ela é destinada.
 
-<img src="./img/Pagina_Filme.png">
+<img src="./img/PaginaFilme.png">
