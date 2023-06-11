@@ -16,7 +16,7 @@
 - O catálogo deve está ordenado de maneira correta - *Critério Atendido*
 - Exibir animação de destaque ao passar o mouse - *Critério Atendido*
 
-<img src="./img/">
+<img src="./img/catalogo.png">
 <br>
 
 ## CT-02 - Funcionamento do Carrossel
@@ -31,7 +31,7 @@
 - O carrossel deve ser exibido no topo do conteúdo - *Critério Atendido*
 - Mostrar os filmes mais populares automaticamente - *Critério Atendido*
  
- <img src="./img/">
+ <img src="./img/PaginaPrincipal.png">
  <br>
  
 ## CT-03 - Funcionamento da barra de pesquisa
@@ -48,7 +48,7 @@
 - Apresentar o filme ou série pesquisado - *Critério Atendido*
 - Acessar a página do filme ao clicar na opção desejada - *Critério Atendido*
 
-<img src="./img/">
+<img src="./img/testes/BarraPesquisa.png">
 <br>
 
 ## CT-04 - Funcionamento da tela de cadastro
@@ -68,7 +68,15 @@
 - O usuário não poderá cadastrar caso os campos 'senha' e 'confirmar senha' não estejam coerentes - *Critério Atendido*
 - Exibir alerta ao efetuar o cadastro com êxito - *Critério Atendido*
 
-<img src="./img/">
+<img src="./img/testes/Cadastrar.png">
+<br>
+<img src="./img/testes/CadastrarError1.png">
+<br>
+<img src="./img/testes/CadastrarError2.png">
+<br>
+<img src="./img/testes/CadastrarError3.png">
+<br>
+<img src="./img/testes/CadastrarSucesso.png">
 <br>
 
 ## CT-05 - Funcionamento da tela de login
@@ -86,7 +94,11 @@
 - Os campos de formulário deverão apresentar um alerta caso estejam vazios, contendo divergência nos dados ou com informações não cadastradas no sistema - *Critério Atendido*
 - Exibir alerta ao efetuar o login com êxito - *Critério Atendido*
 
-<img src="./img/">
+<img src="./img/testes/Login1.png">
+<br>
+<img src="./img/testes/LoginError.png">
+<br>
+<img src="./img/testes/LoginSucesso.png">
 <br>
 
 ## CT-06 - Exibição de informações específicas de cada obra
@@ -101,7 +113,7 @@
 - Deverá exibir as informações de duração, ano de estreia, tipo, sinopse, gênero e trailer do filme escolhido - *Critério Atendido*
 - Informações deverão estar bem apresentadas - *Critério Atendido*
 
-<img src="./img/">
+<img src="./img/testes/Pagina_filme2.png">
 <br>
 
 ## CT-07 - Avaliar os filmes dando a nota por estrelas
@@ -118,7 +130,7 @@
 - O usuário deverá conseguir escolher a quantidade de estrelas desejada - *Critério Atendido*
 - As estrelas deverão ser exibidas no comentário feito - *Critério Atendido*
 
-<img src="./img/">
+<img src="./img/PaginaFilme.png">
 <br>
 
 ## CT-08 - Funcionamento do comentário ao digitar e enviar
@@ -139,7 +151,11 @@
 - O campo deverá limpar ao enviar o comentário - *Critério Atendido*
 - Exibir o comentário publicado abaixo - *Critério Atendido*
 
-<img src="./img/">
+<img src="./img/testes/PaginaFilmeError1.png">
+<br>
+<img src="./img/testes/PaginaFilmeError2.png">
+<br>
+<img src="./img/testes/Comentado.png">
 <br>
 
 ## CT-09 - Funcionamento da filtragem por tipo
@@ -155,7 +171,7 @@
 - Não poderá selecionar as duas opções ao mesmo tempo, tirando o destaque de uma ao selecionar a outra - *Critério Atendido*
 - Deverá exibir somente o conteúdo da opção desejada - *Critério Atendido*
 
-<img src="./img/">
+<img src="./img/testes/FiltragemTipo.png">
 <br>
 
 ## CT-10 - Funcionamento da filtragem por gênero
@@ -171,7 +187,7 @@
 - Não poderá selecionar mais de uma opção ao mesmo tempo, tirando o destaque de uma ao selecionar a outra - *Critério Atendido*
 - Deverá exibir somente o conteúdo da opção desejada - *Critério Atendido*
 
-<img src="./img/">
+<img src="./img/PaginaFiltragem.png">
 <br>
 
 ## CT-11 - Responsividade
@@ -188,4 +204,4 @@
 **Observações (CT-11):** 
 - Os elementos do site ainda não correspondem corretamente de acordo com a variação da proporção da aba do site.
 
-<img src="./img/">
+<img src="./img/testes/responsividade.png">
