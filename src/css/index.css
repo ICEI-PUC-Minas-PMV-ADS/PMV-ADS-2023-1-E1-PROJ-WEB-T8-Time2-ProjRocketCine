@@ -208,7 +208,7 @@ header ul .home a:hover {
     color: #F4A645;
 }
 
-.click{
+.click {
     border-bottom: 2px solid #F4A645;
     color: #F4A645;
 }
@@ -221,12 +221,12 @@ header input:focus {
     outline: 0;
 }
 
-#resultado_pesquisa #listados { 
+#resultado_pesquisa #listados {
     margin-top: 0.3%;
     margin-left: 23%;
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color:#34353a;
+    background-color: #34353a;
     color: white;
     width: 55%;
     font-family: sans-serif;
@@ -243,17 +243,17 @@ header input:focus {
     display: none;
 }
 
-#resultado_pesquisa #listados li{
+#resultado_pesquisa #listados li {
     padding: 10px;
     cursor: pointer;
-    background-image: url("docs/img/lupa.png");
-    background-repeat:no-repeat;
+    background-image: url("../../docs/img/lupa.png");
+    background-repeat: no-repeat;
     background-size: 15px;
     background-position: 10px;
 
 }
 
-#resultado_pesquisa #listados li a{
+#resultado_pesquisa #listados li a {
     margin: 28px;
 }
 
@@ -273,9 +273,6 @@ header input:focus {
 }
 
 
-
-
-
 #resultado_pesquisa summary input {
     margin-top: 1.2%;
     margin-left: 1.0%;
@@ -290,7 +287,7 @@ header input:focus {
     padding-left: 3%;
     box-shadow: inset 0px 0px 20px -5px rgba(0, 0, 0, 0.25);
     background-color: rgba(37, 38, 43, 0.1);
-    background-image: url("docs/img/lupa.png");
+    background-image: url("../../docs/img/lupa.png");
     background-repeat: no-repeat;
     background-size: 2.5%;
     background-position-x: 1.5%;
@@ -309,37 +306,37 @@ header input:focus {
     border-radius: 32px;
 }
 
-#conteudo ul{
-    display:inline-block;
+#conteudo ul {
+    display: inline-block;
     width: 12%;
     height: 1%;
     margin: 15px;
     cursor: pointer;
-  }
+}
 
-  #conteudo li{
+#conteudo li {
     color: black;
     text-align: left;
     list-style: none;
-  }
+}
 
-  #conteudo img{
+#conteudo img {
     width: 100%;
     border-radius: 8px;
     box-shadow: -20px 0px 20px #00000086;
-  }
+}
 
-  #conteudo p{
+#conteudo p {
     float: left;
     margin-left: 1.5%;
     font-family: sans-serif;
     color: white;
-  }
+}
 
-  #conteudo .classificacao {
+#conteudo .classificacao {
     background: #F4A645;
     width: 50px;
-    height: 50px;
+    height: 45px;
     border-radius: 180%;
     position: absolute;
     z-index: 5;
@@ -348,28 +345,28 @@ header input:focus {
     margin-left: 7.8%;
     text-align: center;
     box-shadow: inset 0px -4px 5px #a86026, inset 0px 4px 5px #F4A645;
-    cursor:default;
+    cursor: default;
 }
 
 #conteudo h1 {
-    margin-top: 22%;
+    margin-top: 20%;
     font-family: sans-serif;
     font-size: 1.4rem;
     color: white;
 }
 
-#conteudo #teste{
+#conteudo #teste {
     width: 100%;
     height: auto;
     margin-top: -2.8%;
     border-top: 2px solid white;
-    border-radius: 32px 32px 0 0 ;
+    border-radius: 32px 32px 0 0;
     background-color: #0000002f;
     display: flex;
     box-shadow: inset -4px -0px 40px #00000086;
 }
 
-#conteudo #teste h2{
+#conteudo #teste h2 {
     position: absolute;
     margin-left: 16.5%;
     margin-top: 9.8%;
@@ -379,7 +376,7 @@ header input:focus {
     font-weight: bold;
 }
 
-#conteudo #teste h3{
+#conteudo #teste h3 {
     position: absolute;
     margin-left: 56%;
     margin-top: 13%;
@@ -389,21 +386,24 @@ header input:focus {
     font-weight: bold;
 }
 
-#conteudo #teste .filme{
+#conteudo #teste .filme {
     padding-top: 2%;
     padding-bottom: 2%;
-    margin-left: 4%; 
+    margin-left: 4%;
     width: 200px;
-    cursor:default;
+    cursor: default;
     pointer-events: none;
 }
 
-#conteudo #teste .classificacao{
-    margin-top: 2.5%;
-    margin-left: 25%; 
+#conteudo #teste #classificacaoid {
+    width: 10%;
+    height: 4%;
+    margin-top: 2.2%;
+    margin-left: 24%;
+    position: absolute;
 }
 
-#conteudo #teste .sinopse{
+#conteudo #teste .sinopse {
     margin-top: 12.5%;
     margin-left: 2%;
     padding-top: 3%;
@@ -413,37 +413,43 @@ header input:focus {
     border-radius: 8px;
 }
 
-#conteudo #teste iframe{
-    border-radius: 8px;
+#conteudo #teste .trailer {
     margin-left: 2%;
-    margin-top: 3%;
 }
 
-#conteudo #teste .sinopse p{
+
+
+
+#conteudo #teste .trailer iframe {
+    border-radius: 8px;
+    margin-top: 10%;
+}
+
+#conteudo #teste .sinopse p {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 7;
     -webkit-box-orient: vertical;
 }
 
-#conteudo #teste #titulo{
+#conteudo #teste #titulo {
     font-weight: bold;
 }
 
-#conteudo #teste #genero{
+#conteudo #teste #genero {
     position: absolute;
-    width: 26%;
+    width: 40%;
     height: auto;
     margin-left: 19.5%;
     margin-top: 7%;
-    cursor:default;
+    cursor: default;
     cursor: default;
     pointer-events: none;
 }
 
 #conteudo #teste #genero li {
-    display: inline; 
-    cursor:default;   
+    display: inline;
+    cursor: default;
 }
 
 #conteudo #teste #genero li p {
@@ -452,10 +458,10 @@ header input:focus {
     margin-bottom: 2.5%;
     border: 1px solid #a86026;
     border-radius: 32px;
-    cursor:default;
+    cursor: default;
 }
 
-#conteudo #teste .informacoes{
+#conteudo #teste .informacoes {
     position: absolute;
     display: flex;
     height: 15%;
@@ -467,7 +473,7 @@ header input:focus {
     pointer-events: none;
 }
 
-#conteudo #teste .informacoes p{
+#conteudo #teste .informacoes p {
     margin-bottom: 5px;
     width: 150px;
     height: 20%;
@@ -720,16 +726,18 @@ nav hr {
     margin-top: -1%;
     box-shadow: 0px 0px 30px #101113;
     position: relative;
-  }
+}
 
-  .slideshow-container img{
+.slideshow-container img {
     height: 600px;
     border-radius: 20px;
-  }
-  
-  .mySlides { display: none;}
-  
-  .text {
+}
+
+.mySlides {
+    display: none;
+}
+
+.text {
     position: absolute;
     bottom: 8px;
     font-family: sans-serif;
@@ -738,12 +746,12 @@ nav hr {
     width: 100%;
     font-size: 30px;
     padding: 8px 12px;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 0 0 14px 14px;
     margin-bottom: 4%;
-  }
+}
 
-  .dot {
+.dot {
     display: inline-block;
     border: 2px solid white;
     height: 15px;
@@ -751,47 +759,52 @@ nav hr {
     border-radius: 50%;
     margin: 0 10px;
     transition: background-color 0.6s ease;
-  }
-  
-  .active {
+}
+
+.active {
     background-color: #ffffff;
-  }
-  
-  .fade {
+}
+
+.fade {
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from{ opacity: 0.4}
-    to { opacity: 1}
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 /* Comentário */
-#cmt .comentario{
+#cmt .comentario {
     position: relative;
-        top: 0;
-        left:0;
+    top: 0;
+    left: 0;
     width: 60%;
     border-radius: 10px;
     margin-left: 20%;
     margin-top: 1%;
 }
 
-#cmt .usuario-avaliacao{
+#cmt .usuario-avaliacao {
     height: 70px;
     width: 600px;
     border-radius: 10px;
 }
 
-#cmt .imagem-usuario{
+#cmt .imagem-usuario {
     float: left;
     margin-top: 15%;
     margin-left: -14%;
-    width: 8%;  
+    width: 8%;
 }
 
-#cmt .imagem-usuario img{
+#cmt .imagem-usuario img {
     width: 100%;
 }
 
@@ -801,7 +814,7 @@ nav hr {
     top: 12px;
 }
 
-#cmt #novoComentario{
+#cmt #novoComentario {
     outline: none;
     resize: none;
     width: 100%;
@@ -815,87 +828,87 @@ nav hr {
     margin-top: 1%;
 }
 
-#cmt #novoComentario::placeholder{
+#cmt #novoComentario::placeholder {
     color: white;
 }
 
-#cmt .btn-com button{
+#cmt .btn-com button {
     float: right;
     margin-right: 3%;
     margin-top: 1%;
     background: none;
     border: 2px solid rgb(196, 196, 196);
     color: rgb(196, 196, 196);
-    padding:  6px;
+    padding: 6px;
     border-radius: 10px;
     cursor: pointer;
 }
 
-#cmt .btn-com button:hover{
+#cmt .btn-com button:hover {
     border: 2px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
 }
 
 /*Estrelas-comentário*/
-#cmt .rating{
+#cmt .rating {
     float: left;
     padding-top: 10%;
-    }
-    
-    #cmt .rating input {
-        display: none;
-        cursor: pointer;
-    }
-      
-    #cmt .rating label {
-        float: right;
-        cursor: pointer;
-        font-size: 30px;
-        color: lightgray;
-    }
-      
-    #cmt .rating label:before {
-        content: '\2605';
-    }
-      
-    #cmt .rating input:checked ~ label {
-        color: gold;
-    }
+}
 
-    #cmt .conteudo-com{
-        margin-top: 2%;
+#cmt .rating input {
+    display: none;
+    cursor: pointer;
+}
+
+#cmt .rating label {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    color: lightgray;
+}
+
+#cmt .rating label:before {
+    content: '\2605';
+}
+
+#cmt .rating input:checked~label {
+    color: gold;
+}
+
+#cmt .conteudo-com {
+    margin-top: 2%;
 }
 
 /* Comentado */
-#comentado .comentario{
+#comentado .comentario {
     position: relative;
-        top: 0;
-        left: 0;
+    top: 0;
+    left: 0;
     width: 60%;
     border-radius: 10px;
     margin-left: 17.5%;
     margin-top: 5%;
 }
 
-#comentado .usuario-avaliacao{
+#comentado .usuario-avaliacao {
     padding-top: 50px;
     width: 600px;
     margin-left: 40px;
     border-radius: 10px;
 }
 
-#comentado .imagem-usuario{
+#comentado .imagem-usuario {
     float: left;
     margin-top: 5%;
     margin-left: -10%;
     width: 5.5%;
 }
 
-#comentado .imagem-usuario img{
+#comentado .imagem-usuario img {
     width: 100%;
 }
 
-#comentado p{
+#comentado p {
     color: white;
     padding-right: 10px;
     margin-bottom: -10px;
@@ -904,7 +917,7 @@ nav hr {
     font-size: 1.3rem;
 }
 
-#comentado textarea{
+#comentado textarea {
     border-radius: 10px;
     width: 100%;
     height: 100px;
@@ -918,12 +931,12 @@ nav hr {
     color: white;
 }
 
-#comentado .conteudo-com{
+#comentado .conteudo-com {
     margin-top: -5%;
 }
 
 /*Estrelas-comentado*/
-#comentado .rating{
+#comentado .rating {
     top: 10px;
     float: left;
 }
@@ -931,18 +944,18 @@ nav hr {
 #comentado .rating input {
     display: none;
 }
-  
+
 #comentado .rating label {
     font-size: 20px;
 }
-  
+
 #comentado .rating label:before {
     content: '\2605';
     color: gold;
 }
 
 
-#comentado .rating1{
+#comentado .rating1 {
     top: 10px;
     float: left;
 }
@@ -950,28 +963,46 @@ nav hr {
 #comentado .rating1 input {
     display: none;
 }
-  
+
 #comentado .rating1 label {
     font-size: 20px;
 }
-  
+
 #comentado .rating1 label:before {
     content: '\2605';
     color: lightgray;
 }
 
-/* Rodapé */
-#rodape{
-    text-align: center;
-    padding: 4%;
+
+/*Estrelas da classificação do filme*/
+#classificacaoid #star {
+    width: 20px;
+    box-shadow: none;
+    margin-top: 4%;
   }
 
-  #rodape h5{
+#classificacaoid #star1 {
+width: 20px;
+box-shadow: none;
+margin-top: 3%;
+filter: grayscale(1);
+}
+ 
+
+
+/* Rodapé */
+#rodape {
+    text-align: center;
+    padding: 4%;
+}
+
+#rodape h5 {
     color: white;
     font-family: sans-serif;
     font-size: .9rem;
-  }
-  #rodape p{
+}
+
+#rodape p {
     color: white;
     font-size: .9rem;
 }

@@ -21,8 +21,8 @@ const options = {
 
 
 //Carrousel
-function carrousel(home){
-    if(home == 1){
+function carrousel(home) {
+    if (home == 1) {
         document.getElementById('testando').innerHTML = `
                     <div class="slideshow-container">
                         <div class="mySlides fade">
@@ -44,14 +44,14 @@ function carrousel(home){
                         <span class="dot"></span>
                         <span class="dot"></span>
                     </div>
-                `      
-        }else{document.getElementById('testando').innerHTML = ''}    
+                `
+    } else { document.getElementById('testando').innerHTML = '' }
 }
 
 
 
 // Coleta os dados de cada filme ou série com base na lista de ids list_id
-async function print_midia(url_movies, home='') {
+async function print_midia(url_movies, home = '') {
     try {
         const response = await fetch(url_movies, options);
         const result = await response.json();
@@ -69,13 +69,12 @@ async function print_midia(url_movies, home='') {
 
         const id_e_tipo_filme = `${id}-${tipo}`
 
+        var cla = classificacao / 2
+
         const responses = await fetch(img)
 
         if (responses.status != 404) {
-
-            console.log('testando')
-
-            document.getElementById('estilo').innerHTML +=`
+            document.getElementById('estilo').innerHTML += `
             #conteudo #${id_e_tipo_filme} img:hover{
                 border: 2px solid #232428;
                 filter: opacity(80%);
@@ -85,7 +84,7 @@ async function print_midia(url_movies, home='') {
             document.getElementById('conteudo').innerHTML += `
             <ul id="${id_e_tipo_filme}" onclick="detalhes_filme(this.id)">
                 <div class="classificacao">
-                    <h1>${classificacao}</h1>
+                    <h1>${Math.ceil(cla)}</h1>
                 </div>    
                 <li><img src='${img}'><p>${titulo}</p></li>
             </ul>    
@@ -111,7 +110,7 @@ barraPesquisa.addEventListener('input', () => {
     }
 })
 
-function limpar_pesquisa(){
+function limpar_pesquisa() {
     listados.classList.remove('tt')
     barraPesquisa.value = ''
     listados.innerHTML = ''
@@ -170,11 +169,25 @@ barraPesquisa.addEventListener('input', () => {
     pesquisando_filmes(barraPesquisa.value);
 });
 
+function star(classificacao){
+    cl_coreta = classificacao / 2
+    //Impressão das estrelas na classificação
+    for (c = 1; c <= Math.ceil(cl_coreta); c++) {
+        document.getElementById(`classificacaoid`).innerHTML += `
+        <img src="./docs/img/star.png" id="star">
+    `}
+
+    for (fc = 1; fc <= 5 - Math.ceil(cl_coreta); fc++) {
+        document.getElementById(`classificacaoid`).innerHTML += `
+        <img src="./docs/img/star.png" id="star1">
+    `}
+}
+
 
 // Página específica de cada filme
 var starValue = 0
 var n_comentario = []
-async function pagina_filmes(url){
+async function pagina_filmes(url) {
     
     try {
         const response = await fetch(url, options);
@@ -191,23 +204,23 @@ async function pagina_filmes(url){
         const tipo = result.results.type
         const genero = result.results.gen
 
-
-        if(ano == undefined){
+        if (ano == undefined) {
             ano = result.results.start_year
         }
-        
+
         const id_e_tipo_filme = `${id}-${tipo}`
 
         const responses = await fetch(img)
 
         if (responses.status != 404) {
 
+
             document.getElementById('conteudo').innerHTML += `
             <div id='teste'></div>
             `
 
-            function genero_f(){
-                for(i = 1; i<= genero.length; i++){ 
+            function genero_f() {
+                for (i = 1; i <= genero.length; i++) {
                     document.getElementById('genero').innerHTML += `
                         <li><p>${genero[i - 1].genre}</p></li>
                         `
@@ -223,8 +236,10 @@ async function pagina_filmes(url){
             document.getElementById('teste').innerHTML += `
                 <h2>Sinopse:</h2>
 
-                <div class="classificacao">
-                    <h1>${classificacao}</h1>
+                <div id="classificacaoid">
+
+                </div>
+                    
                 </div>
 
                 <div class="sinopse">
@@ -243,9 +258,12 @@ async function pagina_filmes(url){
                     </ul>
                 </div>
 
-                <iframe width="340" height="200" src="${trailer}" frameborder="0">
-                </<iframe> 
+                <div class='trailer'>
+                    <iframe width="340" height="200" src="${trailer}" frameborder="0">
+                    </<iframe> 
+                </div>
             `
+            star(classificacao)
 
             //comentário
             document.getElementById('cmt').innerHTML = `
@@ -296,10 +314,10 @@ async function pagina_filmes(url){
 
             let key = []
             let comentarios = []
-            for (var i = 0; i < localStorage.length; i++){
+            for (var i = 0; i < localStorage.length; i++) {
                 let chave = localStorage.key(i)
                 let chave_sp = chave.split('-')
-                if(chave_sp[1] == id){
+                if (chave_sp[1] == id) {
                     key.push(id)
                     comentarios.push([chave_sp])
                     n_comentario.push(id)
@@ -307,11 +325,11 @@ async function pagina_filmes(url){
             }
 
             var cont = 0
-           
+
+
             if (id == key[0]) {
                 comentarios.forEach((comentarios_p) => {
                     cont++
-                    console.log(comentarios_p)
                     document.getElementById('comentado').innerHTML += `
                         <div class="comentario">
                             <div id="corpo">
@@ -331,7 +349,6 @@ async function pagina_filmes(url){
                             </section>
                         </div>
                         `
-                        
 
                     //Impressão das estrelas no comentado
                     for (i = 1; i <= comentarios_p[0][2]; i++) {
@@ -350,9 +367,9 @@ async function pagina_filmes(url){
                             </div>
                     `}
                     
-                })
-            }
+                })             
 
+            }
             genero_f()
         }
 
@@ -363,7 +380,7 @@ async function pagina_filmes(url){
 
 
 // Filtra os ids para realizar coleta dos dados de cada filme
-async function id_movies(url, list_id, home='') {
+async function id_movies(url, list_id, home = '') {
     try {
         const response = await fetch(url, options)
         const result = await response.json()
@@ -389,7 +406,7 @@ async function id_movies(url, list_id, home='') {
 
 
 // Filtra os ids para realizar coleta dos dados de cada série
-async function id_series(url, list_id, home='') {
+async function id_series(url, list_id, home = '') {
     try {
         const response = await fetch(url, options)
         const result = await response.json()
@@ -419,13 +436,13 @@ async function id_series(url, list_id, home='') {
 function limpar(response) {
     conteudo.innerHTML = ''
     cmt.innerHTML = ''
-    comentado.innerHTML = '' 
+    comentado.innerHTML = ''
 
 }
 
 
 // Validando Filme ou série do elemento clicado
-async function detalhes_filme(id){
+async function detalhes_filme(id) {
     limpar()
     id_e_tipo_filme = id.split('-')
 
@@ -438,7 +455,7 @@ const conteudo = document.getElementById('conteudo')
 
 
 // Função para requisitar os filmes
-function printar_conteudos(funcao, url, lista, home='') {
+function printar_conteudos(funcao, url, lista, home = '') {
 
     if (conteudo.childNodes.length === 0) {
         funcao(url, lista, home)
@@ -458,19 +475,19 @@ function validacao_generos(id) {
     series = document.getElementById('seriesA')
     home = document.getElementById('homeA')
 
-    if(id == 'filmes'){
+    if (id == 'filmes') {
 
         home.classList.remove('click')
         series.classList.remove('click')
         filmes.classList.add('click')
 
-    } else if(id == 'series'){
+    } else if (id == 'series') {
 
         home.classList.remove('click')
         filmes.classList.remove('click')
         series.classList.add('click')
 
-    } else if(id == 'home'){
+    } else if (id == 'home') {
 
         filmes.classList.remove('click')
         series.classList.remove('click')
@@ -529,7 +546,7 @@ function showSlides() {
 var cont = 1
 
 function nComentario(id_filme) {
-    
+
     cont++
     let comentario = document.getElementById('novoComentario')
     let usuario = document.getElementById('nome')
@@ -537,10 +554,10 @@ function nComentario(id_filme) {
 
     if (comentario.value == '') {
         alert('Digite um comentario')
-    
+
     } else if (login.value == '') {
         alert('Realize o Log-in!')
-    
+
     } else {
 
         localStorage.setItem(`comentario${n_comentario.length + cont}-${id_filme}-${starValue}`, comentario.value, usuario.value)
