@@ -1,49 +1,70 @@
 @media screen and (max-width: 1366px) {
 
-    body{
-        font-size: 1rem;
+    *{
+        font-size: 92%;
     }
 
+    body{
+      width: 98vw;
+    }
+
+    /* Entrar e cadastrar*/
     header .entrar_cadastrar {
-        width: 13%;
-        margin-top: 2%;
+        width: 10.5%;
+        margin-top: 1.9%;
         margin-right: 2.5%;
         
     }
-    
-    header #cadastrar {
-        font-size: 1rem;
-    }
-    
-    header #entrar {
-        font-size: 1rem;
+
+    #resultado_pesquisa summary input {
+      height: 25px;
+      margin-top: 1.4%;
+      font-size: .8rem;
     }
 
+    header #cadastrar {
+      font-size: 1rem;
+    }
+
+    header #entrar {
+      font-size: 1rem;
+    }
+
+    /* Home Filmes e Series */
     header ul {
-        margin-top: 2%;
-        font-size: 1rem;
+        margin-top: 1.7%;
         width: 20%;
     }
 
+    /* Nave bar */
     nav #logo {
         margin-top: 15%;
         margin-left: 7%;
         width: 85%;
     }
-    
+
     nav ul a {
-        font-size: 1rem;
+      font-size: 1rem;
     }
+
     nav h1 {
-        font-size: 1rem;
+      font-size: 1.2rem;
+    }
+    
+    /*Conteudo do site */
+
+    .slideshow-container img {
+      height: 500px;
     }
 
+    #filmes_conteudo #conteudo ul li p{
+      font-size: .8rem;
+    }
 
-    #conteudo ul{
+    #conteudo .filme{
         display:inline-block;
         max-width: 13%;
-        margin: 15px;
-        
+        margin: 15px;   
       }
       
       
@@ -69,6 +90,109 @@
         margin-left: 4%;
        
     }
+
+    #conteudo .classificacao {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* Modal de cadastro */
+
+    .modal form input {
+      width: 80%;
+      height: 15%;
+    }
+
+    .modal h4{
+      font-size: 1.2rem;
+      margin-top: 21.8%;
+      margin-left: 16%;
+    }
+
+
+    .modal h2 {
+      margin-left: 13%;
+      font-size: 1rem;
+  }
+
+  .modal #criar {
+    margin-top: 21.2%;
+    margin-left: 23%;
+
+}
+
+#modal_login #logar {
+  margin-top: 14%;
+  margin-left: 23%;
+}
+
+#modal_login #logar a {
+  font-size: .8rem;
+
+}
+
+#modal_login .modal h4{
+  margin-top: 19%;
+  margin-left: 16%;
+}
+
+/* Pagina de filmes */
+
+#conteudo #teste .informacoes {
+  font-size: 1.1rem;
+  margin-top: 1%;
+}
+
+#classificacaoid #star, #classificacaoid #star1 {
+  width: 15px;
+  margin-top: -1%;
+}
+
+#conteudo #teste #genero {
+  width: 30%;
+  margin-left: 20%;
+  margin-top: 7.4%;
+}
+
+#conteudo #teste #genero li p{
+  font-size: .6rem;
+  padding: 6px;
+}
+
+#conteudo #teste .trailer {
+  width: 25%;
+}
+
+#conteudo #teste .trailer iframe{
+  margin-top: 5%;
+  width: 100%;
+  height: 60%;
+}
+
+
+#conteudo #teste .sinopse{
+  max-height: 120px;
+}
+
+#conteudo #teste .sinopse p{
+  font-size: 1rem;
+}
+
+#conteudo #teste h2 {
+  font-size: 1.2rem;
+}
+
+#cmt .btn-com button {
+  font-size: .8rem;
+}
+
+#cmt .rating label{
+  font-size: 24px;
+}
+
+#comentado textarea {
+  font-size: 1rem;
+}
 
 }
 
