@@ -199,7 +199,7 @@
 
 ### Critérios de Êxito:
 
-- O site deve apresentar a distribuição de seus elementos de forma correta independente da forma como o navegador é exibido - *Critério Não Atendido*
+- O site deve apresentar a distribuição de seus elementos de forma correta independente da forma como o navegador é exibido - *Critério Atendido*
 
 **Observações (CT-11):** 
 - Os elementos do site ainda não correspondem corretamente de acordo com a variação da proporção da aba do site.
