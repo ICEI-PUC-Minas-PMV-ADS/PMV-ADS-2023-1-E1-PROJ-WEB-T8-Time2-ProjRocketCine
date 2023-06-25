@@ -36,7 +36,7 @@ O projeto tem como foco o compartilhamento de críticas e avaliações dos usuá
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado. 
+* <a href="https://icei-puc-minas-pmv-ads.github.io/PMV-ADS-2023-1-E1-PROJ-WEB-T8-Time2-ProjRocketCine/Index.html"> Rocket Cine </a>
 
 # Armazenamento do Código-Fonte
 
