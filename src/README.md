@@ -13,3 +13,5 @@ Para ter acesso ao site basta realizar os seguintes passos:
 ## Histórico de versões
 
 ### [0.1.0] - 10/06/2023
+<br>
+### [0.1.1] - 25/06/2023
